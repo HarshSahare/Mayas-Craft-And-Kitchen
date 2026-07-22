@@ -11,7 +11,7 @@ function UpperFooter() {
         alt="Maya's Craft and Kitchen logo"
         className="mx-auto"
       />
-      <div className="font-dm text-center text-foreground text-[16px] px-9 font-medium">
+      <div className="font-dm text-center text-foreground text-[16px] px-9 font-medium italic">
         “Handcrafted gifts and freshly made treats designed to make every
         celebration unforgettable “
       </div>
