@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { dancingScript, dmSans } from "./lib/fonts";
+import Navbar from "./layout/navbar";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dmSans.variable} ${dancingScript.variable}`}>
+        <Navbar />
         {children}
       </body>
     </html>
