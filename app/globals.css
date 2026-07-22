@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+:root {
+  --background: #FFF8F4;
+  --foreground: #2B2B2B;
+  --primary-color: #4A2E2B;
+  --navbar-background: #FFC0CB;
+  --navbar-height: 80px;
+}
+
+@theme inline {
+  --font-dm: var(--font-dm-sans);
+  --font-dancing: var(--font-dancing-script);
+  --color-primary: var(--primary-color)
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #FFF8F4;
+    --foreground: #2B2B2B;
+    --navbar-background: #FFC0CB;
+    --navbar-height: 80px;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
