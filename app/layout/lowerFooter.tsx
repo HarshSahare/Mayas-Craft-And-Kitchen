@@ -7,7 +7,7 @@ function LowerFooter() {
       <div className="text-center font-dm font-bold uppercase text-[10px]">
         Quick Links
       </div>
-      <ul className="flex gap-5.5 w-fit my-3 font-medium text-[10px] mx-auto">
+      <ul className="flex gap-5.5 w-fit my-3 font-medium text-[10px] mx-auto px-9">
         <li>
           <Link href="#">Home</Link>
         </li>
@@ -25,7 +25,7 @@ function LowerFooter() {
       <div className="mt-6 text-center font-dm font-bold uppercase text-[10px]">
         Categories
       </div>
-      <ul className="flex gap-5.5 w-fit my-3 font-medium text-[10px] mx-auto">
+      <ul className="flex gap-5.5 w-fit my-3 font-medium text-[10px] mx-auto px-9">
         <li>
           <Link href="#">Custom Hampers</Link>
         </li>
