@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function SearchBar() {
   return (
-    <div className="py-5 bg-navbar sticky top-15 ">
+    <div className="py-5 bg-navbar">
       <div className="bg-white py-4 px-4.25 rounded-2xl flex">
         <input
           type="text"

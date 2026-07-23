@@ -1,4 +1,5 @@
 import SearchBar from "./components/searchBar";
+import ToogleSection from "./components/toogleSection";
 
 export default function Home() {
   return (
@@ -7,7 +8,10 @@ export default function Home() {
         Every Occasion Deserves
         <br /> Something Special.
       </div>
-      <SearchBar />
+      <div className="sticky top-16 bg-navbar drop-shadow-sm">
+        <SearchBar />
+        <ToogleSection />
+      </div>
     </>
   );
 }
