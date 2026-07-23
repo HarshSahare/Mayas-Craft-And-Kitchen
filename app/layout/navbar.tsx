@@ -6,7 +6,7 @@ import { CartIcon } from "@solar-icons/react/outline/cart";
 
 function Navbar() {
   return (
-    <nav className="navbar bg-navbar">
+    <nav className="navbar bg-navbar px-4">
       <div className="navbar_logo">
         <Image
           src="/images/navbar_logo.png"
@@ -18,7 +18,7 @@ function Navbar() {
 
       <div className="nav_buttons">
         <UserIcon size={24} className="text-foreground mr-5" />
-        <CartIcon size={24} className="text-foreground mr-4" />
+        <CartIcon size={24} className="text-foreground " />
       </div>
     </nav>
   );
