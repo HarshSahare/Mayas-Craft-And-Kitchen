@@ -3,7 +3,7 @@ import React from "react";
 function MiddleFooter() {
   return (
     <>
-      <div className="font-dm text-center font-black text-[10px]">
+      <div className="font-dm text-center font-black text-[12px]">
         Contact Us
       </div>
       <div className="text-center text-[12px] mt-3">
