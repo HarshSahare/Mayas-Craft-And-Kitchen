@@ -5,7 +5,7 @@ import LowerFooter from "./lowerFooter";
 
 function Footer() {
   return (
-    <div className="bg-footer-bg text-foreground">
+    <div className="bg-navbar text-foreground">
       <UpperFooter />
       <div className="my-7.5 w-full h-px bg-foreground"></div>
       <MiddleFooter />

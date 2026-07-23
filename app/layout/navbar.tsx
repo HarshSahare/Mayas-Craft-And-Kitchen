@@ -10,8 +10,8 @@ function Navbar() {
       <div className="navbar_logo">
         <Image
           src="/images/navbar_logo.png"
-          height={80}
-          width={80}
+          height={35}
+          width={35}
           alt="Maya's Craft and Kitchen logo ml-[5px]"
         />
       </div>
