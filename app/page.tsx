@@ -1,6 +1,7 @@
 import HeroSection from "./components/heroSection";
 import SearchBar from "./components/searchBar";
 import ToogleSection from "./components/toogleSection";
+import TrendingProducts from "./components/trendingProducts";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <ToogleSection />
       </div>
       <HeroSection />
+      <TrendingProducts />
     </>
   );
 }
