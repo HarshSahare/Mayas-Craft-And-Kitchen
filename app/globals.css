@@ -37,4 +37,5 @@ body {
 body>* {
   padding-left: 14px;
   padding-right: 14px;
+  overflow-x: hidden;
 }

@@ -1,3 +1,4 @@
+import HeroSection from "./components/heroSection";
 import SearchBar from "./components/searchBar";
 import ToogleSection from "./components/toogleSection";
 
@@ -8,10 +9,11 @@ export default function Home() {
         Every Occasion Deserves
         <br /> Something Special.
       </div>
-      <div className="sticky top-16 bg-navbar shadow-[0_4px_8px_-2px_rgba(0,0,0,0.12)]">
+      <div className="sticky z-999 top-16 bg-navbar shadow-[0_4px_8px_-2px_rgba(0,0,0,0.12)]">
         <SearchBar />
         <ToogleSection />
       </div>
+      <HeroSection />
     </>
   );
 }
