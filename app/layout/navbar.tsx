@@ -11,7 +11,7 @@ function Navbar({
   ignoreHomePageRule = false,
   className,
 }: {
-  ignoreHomePageRule: boolean;
+  ignoreHomePageRule?: boolean;
   className?: string;
 }) {
   const pathname = usePathname();
