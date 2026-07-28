@@ -5,7 +5,7 @@ type Props = {
 
 export default function BottomBar({ price, originalPrice }: Props) {
   return (
-    <div className="fixed bottom-0 left-0 right-0 border-t font-dm bg-[#FFF8F4] backdrop-blur">
+    <div className="fixed bottom-0 left-0 right-0 border-t font-dm bg-background backdrop-blur">
       <div className="mx-auto flex max-w-md items-center justify-between p-4">
         <div>
           <div className="flex gap-2">

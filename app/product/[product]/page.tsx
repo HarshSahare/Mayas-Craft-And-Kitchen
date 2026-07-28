@@ -21,7 +21,7 @@ export default async function ProductPage({ params }: Props) {
   if (!item) notFound();
 
   return (
-    <main className="bg-[#FAF6F2]">
+    <main className="bg-background">
       <div className="mx-auto max-w-md px-4 py-4">
         <ProductGallery images={item.images} />
 

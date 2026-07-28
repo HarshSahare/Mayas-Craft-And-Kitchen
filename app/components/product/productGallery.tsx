@@ -20,7 +20,7 @@ export default function ProductGallery({ images }: Props) {
           width={600}
           height={600}
           priority
-          className="aspect-video w-full object-contain transition-all duration-300 bg-[#2b2b2b]"
+          className="aspect-video w-full object-cover transition-all duration-300 bg-[#2b2b2b]"
         />
 
         {/* Indicator Dots */}
@@ -39,7 +39,6 @@ export default function ProductGallery({ images }: Props) {
         </div>
       </div>
 
-      {/* Thumbnails */}
       <div className="mt-4 flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
         {images.map((image, index) => (
           <button
