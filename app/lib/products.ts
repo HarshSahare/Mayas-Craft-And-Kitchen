@@ -14,7 +14,13 @@ export const Products: ProductsType[] = [
   {
     id: 1,
     name: "Premium silicone friendship wrist band",
-    images: ["/images/product_1_1.jpeg"],
+    images: [
+      "/images/product_1_1.jpeg",
+      "/images/product_1_2.png",
+      "/images/product_1_3.png",
+      "/images/product_1_4.png",
+      "/images/product_1_5.png",
+    ],
     price: 120,
     rating: 2,
     description:
@@ -29,7 +35,13 @@ export const Products: ProductsType[] = [
   {
     id: 2,
     name: "Beaded bracelet with heart shape charm",
-    images: ["/images/product_2_1.jpeg"],
+    images: [
+      "/images/product_2_1.jpeg",
+      "/images/product_2_2.png",
+      "/images/product_2_3.png",
+      "/images/product_2_4.png",
+      "/images/product_2_5.png",
+    ],
     price: 300,
     description:
       "Designed with colorful beads and a delicate heart-shaped charm, this bracelet adds a playful yet elegant touch to your everyday style",
@@ -44,7 +56,13 @@ export const Products: ProductsType[] = [
   {
     id: 3,
     name: "101 reasons why I love you",
-    images: ["/images/product_3_1.jpeg"],
+    images: [
+      "/images/product_3_1.jpeg",
+      "/images/product_3_2.png",
+      "/images/product_3_3.png",
+      "/images/product_3_4.png",
+      "/images/product_3_5.png",
+    ],
     price: 249,
     description:
       "A heartfelt collection of 101 thoughtful reasons that express love and appreciation, making it a meaningful keepsake for your special someone.",
