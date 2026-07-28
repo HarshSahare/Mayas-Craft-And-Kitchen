@@ -1,8 +1,6 @@
 import HeroSection from "./components/heroSection";
 import HomepageStickyComponent from "./components/homepageStickyComponent";
-import SearchBar from "./components/searchBar";
-import TrendingProducts from "./components/trendingProducts";
-import Navbar from "./layout/navbar";
+import OurProducts from "./components/ourProducts";
 
 export default function Home() {
   return (
@@ -14,7 +12,7 @@ export default function Home() {
         </div>
       </HomepageStickyComponent>
       <HeroSection />
-      <TrendingProducts />
+      <OurProducts />
     </>
   );
 }
