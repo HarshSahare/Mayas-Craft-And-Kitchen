@@ -6,7 +6,7 @@ function ProductCard({
   image,
   currentPrice,
   oldPrice,
-  review = 3,
+  review,
   sold,
 }: {
   name: string;
@@ -17,7 +17,7 @@ function ProductCard({
   sold?: number;
 }) {
   return (
-    <div className="w-full">
+    <div className="w-full ">
       <div className="pb-2  pr-4 relative">
         <Image
           src={image}
@@ -44,28 +44,33 @@ function ProductCard({
           </div>
         )}
       </div>
-      <div className="truncate text-[12px] font-bold">{name}</div>
+      <div className="truncate text-[12px] font-dm font-medium capitalize">
+        {name}
+      </div>
       <div className="flex gap-1">
-        <div className="flex">
-          {Array.from({ length: review }).map((v, index) => (
-            <Image
-              key={index}
-              src="/svg/review_star_solid.svg"
-              alt="new solid star"
-              width={10}
-              height={10}
-            />
-          ))}
-          {Array.from({ length: 5 - review }).map((v, index) => (
-            <Image
-              key={index}
-              src="/svg/review_star_outline.svg"
-              alt="new solid star"
-              width={10}
-              height={10}
-            />
-          ))}
-        </div>
+        {review && (
+          <div className="flex">
+            {Array.from({ length: review }).map((v, index) => (
+              <Image
+                key={index}
+                src="/svg/review_star_solid.svg"
+                alt="new solid star"
+                width={10}
+                height={10}
+              />
+            ))}
+            {Array.from({ length: 5 - review }).map((v, index) => (
+              <Image
+                key={index}
+                src="/svg/review_star_outline.svg"
+                alt="new solid star"
+                width={10}
+                height={10}
+              />
+            ))}
+          </div>
+        )}
+
         {sold && (
           <div className="font-dm text-[10px] font-medium text-[#8C8C8C]">
             {sold}
