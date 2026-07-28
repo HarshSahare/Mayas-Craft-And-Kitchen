@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Arrow from "@/public/svg/double_right_array_solid.svg";
 import React from "react";
+import Link from "next/link";
 
 function HeroSection() {
   return (
@@ -17,7 +18,10 @@ function HeroSection() {
             Gift Hampers
           </div>
 
-          <button className="flex items-center gap-2 bg-[#4A2E2B] mt-auto w-fit font-dm font-semibold text-[10px] text-white py-2 px-4.5 rounded-lg cursor-pointer my-2.5">
+          <Link
+            href="/hamper"
+            className="flex items-center gap-2 bg-[#4A2E2B] mt-auto w-fit font-dm font-semibold text-[10px] text-white py-2 px-4.5 rounded-lg cursor-pointer my-2.5"
+          >
             Create Your
             <Image
               src="/svg/double_right_array_solid.svg"
@@ -25,7 +29,7 @@ function HeroSection() {
               height={10}
               alt="Hamper"
             ></Image>
-          </button>
+          </Link>
         </div>
         <div className="flex-1">
           <Image
