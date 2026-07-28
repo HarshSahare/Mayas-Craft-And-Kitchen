@@ -1,23 +1,29 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function ProductCard({
+  id,
   name,
   image,
   currentPrice,
   oldPrice,
-  review,
+  rating,
   sold,
 }: {
+  id: number;
   name: string;
   image: string;
   currentPrice: number;
   oldPrice?: number;
-  review?: number;
+  rating?: number;
   sold?: number;
 }) {
   return (
-    <div className="w-full ">
+    <Link
+      href={`/product/${id}-${name.toLocaleLowerCase().split(" ").join("-")}`}
+      className="w-full "
+    >
       <div className="pb-2  pr-4 relative">
         <Image
           src={image}
@@ -48,9 +54,9 @@ function ProductCard({
         {name}
       </div>
       <div className="flex gap-1">
-        {review && (
+        {rating && (
           <div className="flex">
-            {Array.from({ length: review }).map((v, index) => (
+            {Array.from({ length: rating }).map((v, index) => (
               <Image
                 key={index}
                 src="/svg/review_star_solid.svg"
@@ -59,7 +65,7 @@ function ProductCard({
                 height={10}
               />
             ))}
-            {Array.from({ length: 5 - review }).map((v, index) => (
+            {Array.from({ length: 5 - rating }).map((v, index) => (
               <Image
                 key={index}
                 src="/svg/review_star_outline.svg"
@@ -77,7 +83,7 @@ function ProductCard({
           </div>
         )}
       </div>
-    </div>
+    </Link>
   );
 }
 

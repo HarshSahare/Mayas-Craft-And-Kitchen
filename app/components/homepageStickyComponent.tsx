@@ -16,16 +16,6 @@ function HomepageStickyComponent({
     ignoreHomePageRule ? "bg-navbar" : "bg-background",
   );
 
-  const pathname = usePathname();
-
-  const isHomePage = pathname === "/" && !ignoreHomePageRule;
-
-  if (isHomePage) {
-    return <></>;
-  }
-
-  const threshold = 80;
-
   useEffect(() => {
     if (!ignoreHomePageRule) return;
     const handleScroll = () => {
@@ -40,6 +30,16 @@ function HomepageStickyComponent({
       window.addEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const pathname = usePathname();
+
+  const isHomePage = pathname === "/" && !ignoreHomePageRule;
+
+  const threshold = 80;
+
+  if (isHomePage) {
+    return <></>;
+  }
 
   return (
     <>

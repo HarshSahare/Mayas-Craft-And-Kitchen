@@ -12,8 +12,9 @@ function OurProducts() {
         {Products.map((p) => (
           <ProductCard
             key={p.id}
+            id={p.id}
             name={p.name}
-            image={p.image}
+            image={p.images[0]}
             currentPrice={p.price}
           />
         ))}
