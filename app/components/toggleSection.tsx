@@ -20,7 +20,7 @@ export default function ToggleSection() {
         <span>Craft</span>
       </button>
 
-      <div className="w-0.5 bg-foreground mx-auto"></div>
+      <div className="w-0.5 h-3.5 my-auto bg-foreground mx-auto"></div>
 
       <button
         onClick={() => setCurrent(1)}
