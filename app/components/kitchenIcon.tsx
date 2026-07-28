@@ -11,7 +11,7 @@ export default function KitchenIcon({ active }: Props) {
       xmlns="http://www.w3.org/2000/svg"
       className="transition-colors duration-300 ease-in-out"
       style={{
-        color: active ? "#E75F73" : "#000000",
+        color: active ? "#E75F73" : "#8c8c8c75",
       }}
     >
       <path
