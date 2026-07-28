@@ -41,9 +41,9 @@ export default function ProductDetails({ product }: Props) {
 
       <h1 className="text-[24px] font-bold">{product.name}</h1>
 
-      <p className="text-[#8F8E8F]  text-[12px]">{product.description}</p>
+      <p className="text-[#8F8E8F] text-[16px]">{product.description}</p>
 
-      <div className="text-[#8F8E8F] mt-6">
+      <div className="text-[#8F8E8F] text-[16px] mt-6">
         <h3 className="font-semibold">Highlights</h3>
 
         <ul className="mt-3 list-disc pl-5 text-gray-500">
