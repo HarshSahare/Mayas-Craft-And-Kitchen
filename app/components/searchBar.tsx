@@ -8,7 +8,7 @@ function SearchBar() {
         <input
           type="text"
           placeholder="Search  “birthday gift”"
-          className="font-dm font-medium flex-1 outline-0"
+          className="font-dm font-medium flex-1 outline-0 text-foreground"
         />
         <Image
           src="/svg/search_icon_solid.svg"

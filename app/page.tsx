@@ -7,7 +7,7 @@ import Navbar from "./layout/navbar";
 export default function Home() {
   return (
     <>
-      <HomepageStickyComponent>
+      <HomepageStickyComponent ignoreHomePageRule>
         <div className="font-dm text-[20px] font-extrabold bg-navbar">
           Every Occasion Deserves
           <br /> Something Special.

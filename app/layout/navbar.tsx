@@ -8,24 +8,12 @@ import { CartIcon } from "@solar-icons/react/outline/cart";
 import Link from "next/link";
 
 function Navbar({
-  ignoreHomePageRule = false,
   className,
 }: {
-  ignoreHomePageRule?: boolean;
   className?: string;
 }) {
-  const pathname = usePathname();
-
-  const isHomePage = pathname === "/" && !ignoreHomePageRule;
-
-  if (isHomePage) {
-    return <></>;
-  }
-
   return (
-    <nav
-      className={`navbar transition-all duration-300 ${ignoreHomePageRule ? className : "bg-background"}`}
-    >
+    <nav className={`navbar transition-all duration-300 ${className}`}>
       <Link href="/" className="navbar_logo">
         <Image
           src="/images/navbar_logo.png"

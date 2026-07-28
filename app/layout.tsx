@@ -3,6 +3,7 @@ import "./globals.css";
 import { dancingScript, dmSans } from "./lib/fonts";
 import Navbar from "./layout/navbar";
 import Footer from "./layout/footer";
+import HomepageStickyComponent from "./components/homepageStickyComponent";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -20,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dmSans.variable} ${dancingScript.variable}`}>
-        <Navbar />
+        <HomepageStickyComponent />
         {children}
         <Footer />
       </body>
