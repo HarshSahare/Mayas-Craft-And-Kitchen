@@ -9,11 +9,23 @@ import Link from "next/link";
 
 function Navbar({
   className,
+  ignoreHomePageRule = false,
 }: {
   className?: string;
+  ignoreHomePageRule?: boolean;
 }) {
+  const pathname = usePathname();
+
+  const isHomePage = pathname === "/" && !ignoreHomePageRule;
+
+  if (isHomePage) {
+    return <></>;
+  }
+
   return (
-    <nav className={`navbar transition-all duration-300 ${className}`}>
+    <nav
+      className={`navbar transition-all duration-300 ${ignoreHomePageRule ? className : "bg-background"}`}
+    >
       <Link href="/" className="navbar_logo">
         <Image
           src="/images/navbar_logo.png"

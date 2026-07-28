@@ -1,23 +1,14 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../layout/navbar";
 import SearchBar from "./searchBar";
 import ToggleSection from "./toggleSection";
-import { usePathname } from "next/navigation";
 
-function HomepageStickyComponent({
-  children,
-  ignoreHomePageRule = false,
-}: {
-  children?: React.ReactNode;
-  ignoreHomePageRule?: boolean;
-}) {
-  const [colors, setColors] = useState(
-    ignoreHomePageRule ? "bg-navbar" : "bg-background",
-  );
+function HomepageStickyComponent({ children }: { children?: React.ReactNode }) {
+  const [colors, setColors] = useState("bg-navbar");
+  const threshold = 80;
 
   useEffect(() => {
-    if (!ignoreHomePageRule) return;
     const handleScroll = () => {
       if (window.scrollY >= threshold) {
         setColors("bg-background");
@@ -31,19 +22,9 @@ function HomepageStickyComponent({
     };
   }, []);
 
-  const pathname = usePathname();
-
-  const isHomePage = pathname === "/" && !ignoreHomePageRule;
-
-  const threshold = 80;
-
-  if (isHomePage) {
-    return <></>;
-  }
-
   return (
     <>
-      <Navbar className={colors} />
+      <Navbar className={colors} ignoreHomePageRule />
       {children}
       <div
         className={
@@ -52,7 +33,7 @@ function HomepageStickyComponent({
         }
       >
         <SearchBar />
-        {ignoreHomePageRule && <ToggleSection />}
+        <ToggleSection />
       </div>
     </>
   );

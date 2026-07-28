@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { dancingScript, dmSans } from "./lib/fonts";
 import Footer from "./layout/footer";
-import HomepageStickyComponent from "./components/homepageStickyComponent";
 import MainLoader from "./components/mainLoader";
+import Navbar from "./layout/navbar";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${dmSans.variable} ${dancingScript.variable}`}>
         <MainLoader>
-          <HomepageStickyComponent />
+          <Navbar />
           {children}
           <Footer />
         </MainLoader>

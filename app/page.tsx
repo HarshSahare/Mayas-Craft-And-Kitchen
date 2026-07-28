@@ -5,7 +5,7 @@ import OurProducts from "./components/ourProducts";
 export default function Home() {
   return (
     <>
-      <HomepageStickyComponent ignoreHomePageRule>
+      <HomepageStickyComponent>
         <div className="font-dm text-[20px] font-extrabold bg-navbar">
           Every Occasion Deserves
           <br /> Something Special.
