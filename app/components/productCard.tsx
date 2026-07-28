@@ -44,7 +44,7 @@ function ProductCard({
           </div>
         )}
       </div>
-      <div className="truncate text-[12px] font-medium">{name}</div>
+      <div className="truncate text-[12px] font-bold">{name}</div>
       <div className="flex gap-1">
         <div className="flex">
           {Array.from({ length: review }).map((v, index) => (
