@@ -52,7 +52,7 @@ function HomepageStickyComponent({
         }
       >
         <SearchBar />
-        <ToggleSection />
+        {ignoreHomePageRule && <ToggleSection />}
       </div>
     </>
   );
