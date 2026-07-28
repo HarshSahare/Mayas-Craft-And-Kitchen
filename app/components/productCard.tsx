@@ -8,7 +8,7 @@ function ProductCard({
   image,
   currentPrice,
   oldPrice,
-  rating,
+  rating=2,
   sold,
 }: {
   id: number;
