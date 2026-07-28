@@ -1,55 +1,22 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import IncludedItemCard from "./includedItemCard";
 import "./includedItems.css";
+import { IncludedItemDataType } from "@/app/lib/hamperData";
 
-const initialItems = [
-  {
-    id: 1,
-    name: "Beautiful Ear Rings",
-    image: "/images/hamper_earring.png",
-    quantity: 1,
-  },
-  {
-    id: 2,
-    name: "Ribbon Hair Clips",
-    image: "/images/hamper_hair_clip.png",
-    quantity: 1,
-  },
-  {
-    id: 3,
-    name: "Multicoloured Scrunchies",
-    image: "/images/hamper_scrunchies.png",
-    quantity: 1,
-  },
-];
+type Props = {
+  items: IncludedItemDataType[];
+  onIncrease: (id: number) => void;
+  onDecrease: (id: number) => void;
+};
 
-export default function IncludedItems() {
-  const [items, setItems] = useState(initialItems);
-
+export default function IncludedItems({
+  items,
+  onIncrease,
+  onDecrease,
+}: Props) {
   const scrollRef = useRef<HTMLDivElement>(null);
-
-  const increase = (id: number) => {
-    setItems((prev) =>
-      prev.map((item) =>
-        item.id === id ? { ...item, quantity: item.quantity + 1 } : item,
-      ),
-    );
-  };
-
-  const decrease = (id: number) => {
-    setItems((prev) =>
-      prev.map((item) =>
-        item.id === id
-          ? {
-              ...item,
-              quantity: Math.max(0, item.quantity - 1),
-            }
-          : item,
-      ),
-    );
-  };
 
   const scroll = (direction: "left" | "right") => {
     scrollRef.current?.scrollBy({
@@ -121,8 +88,8 @@ export default function IncludedItems() {
             image={item.image}
             name={item.name}
             quantity={item.quantity}
-            onIncrease={() => increase(item.id)}
-            onDecrease={() => decrease(item.id)}
+            onIncrease={() => onIncrease(item.id)}
+            onDecrease={() => onDecrease(item.id)}
           />
         ))}
       </div>

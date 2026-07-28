@@ -3,35 +3,15 @@
 import { useRef } from "react";
 import AddItemCard from "./addItemCard";
 import "./includedItems.css";
+import { AddOnItemsDataType } from "@/app/lib/hamperData";
 
-const products = [
-  {
-    id: 1,
-    name: "Custom Photo Frame",
-    image: "/images/hamper_addons_1.png",
-    price: 80,
-  },
-  {
-    id: 2,
-    name: "Beautiful Mini Cards",
-    image: "/images/hamper_addons_2.png",
-    price: 80,
-  },
-  {
-    id: 3,
-    name: "Lighting",
-    image: "/images/hamper_addons_3.png",
-    price: 80,
-  },
-  {
-    id: 4,
-    name: "Chocolate",
-    image: "/images/hamper_addons_4.png",
-    price: 80,
-  },
-];
-
-export default function AddMoreSection() {
+export default function AddMoreSection({
+  products,
+  addItems,
+}: {
+  products: AddOnItemsDataType[];
+  addItems: (id: number) => void;
+}) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: "left" | "right") => {
@@ -39,10 +19,6 @@ export default function AddMoreSection() {
       left: direction === "right" ? 240 : -240,
       behavior: "smooth",
     });
-  };
-
-  const addItem = (id: number) => {
-    console.log("Added:", id);
   };
 
   return (
@@ -108,7 +84,7 @@ export default function AddMoreSection() {
             image={product.image}
             name={product.name}
             price={product.price}
-            onAdd={() => addItem(product.id)}
+            onAdd={() => addItems(product.id)}
           />
         ))}
       </div>

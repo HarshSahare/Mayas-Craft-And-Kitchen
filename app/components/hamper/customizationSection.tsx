@@ -4,8 +4,14 @@ import { useState } from "react";
 
 const MAX_CHARACTERS = 500;
 
-export default function CustomizationSection() {
-  const [message, setMessage] = useState("");
+export default function CustomizationSection({
+    customMessage,
+    setCustomMessage
+}: {
+    customMessage: string,
+    setCustomMessage: (value:string) => void;
+}) {
+  
 
   return (
     <section className="mt-8">
@@ -26,16 +32,16 @@ export default function CustomizationSection() {
       <div className="rounded-3xl border border-primary/20 py-1 px-4 shadow-sm">
         <textarea
           id="gift-message"
-          value={message}
+          value={customMessage}
           maxLength={MAX_CHARACTERS}
-          onChange={(e) => setMessage(e.target.value)}
+          onChange={(e) => setCustomMessage(e.target.value)}
           placeholder="e.g. Change card message, preferred color theme, add a name tag, special wrapping, or any other request..."
           className="h-[calc(2*1.5rem+2rem)] w-full resize-none rounded-2xl bg-background p-4 font-dm text-[12px] text-primary placeholder:text-neutral-400 focus:border-primary focus:outline-none"
         />
 
         <div className="flex justify-end">
           <span className="font-dm text-[12px] text-neutral-500">
-            {message.length}/{MAX_CHARACTERS}
+            {customMessage.length}/{MAX_CHARACTERS}
           </span>
         </div>
       </div>

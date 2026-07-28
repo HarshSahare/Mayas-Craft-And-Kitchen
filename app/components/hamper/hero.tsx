@@ -6,7 +6,7 @@ type Props = {
 
 export default function Hero({ image }: Props) {
   return (
-    <section className="pt-6">
+    <section className="pt-2">
       <div className="relative aspect-video w-full overflow-hidden rounded-2xl">
         <Image
           src={image}
@@ -18,11 +18,11 @@ export default function Hero({ image }: Props) {
       </div>
 
       <div className="mt-8">
-        <h1 className="font-dm text-[24px] font-bold leading-tight text-primary">
+        <h1 className="font-dm text-[28px] font-bold leading-tight text-primary">
           Create a Hamper,
         </h1>
 
-        <h2 className="font-dancing -mt-3 text-[28px] text-[#ED667E]">
+        <h2 className="font-dancing -mt-3 text-[32px] text-[#ED667E]">
           as unique as your bond
         </h2>
       </div>
