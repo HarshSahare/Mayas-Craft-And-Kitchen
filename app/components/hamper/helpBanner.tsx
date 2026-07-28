@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function HelpBanner() {
   return (
     <section className="mt-4">
-      <div className="rounded-sm bg-primary text-[8px] items-center py-[6px] px-4 text-[#FFF8F4] flex">
+      <div className="rounded-sm bg-primary text-[12px] items-center py-[12px] px-4 text-[#FFF8F4] flex">
         <Image src="/svg/idea_icon.svg" width={20} height={20} alt="" />
         <h2 className="ml-1 font-dm font-medium leading-tight">
           Need help deciding?
@@ -20,8 +20,8 @@ export default function HelpBanner() {
         />
 
         <svg
-          width="10"
-          height="10"
+          width="14"
+          height="14"
           className="ml-auto"
           fill="none"
           viewBox="0 0 20 20"

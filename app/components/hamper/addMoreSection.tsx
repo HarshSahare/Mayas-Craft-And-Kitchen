@@ -49,14 +49,14 @@ export default function AddMoreSection() {
     <section className="mt-14">
       <div className="mb-6 flex items-end justify-between">
         <div>
-          <h2 className="font-dm text-[12px] font-bold text-primary">
-            <span className="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-primary text-sm text-white">
+          <h2 className="font-dm text-4 font-bold text-primary">
+            <span className="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full bg-primary text-sm text-white">
               2
             </span>
             Add more to your hamper
           </h2>
 
-          <p className="pl-6 font-dm text-[10px] text-neutral-500">
+          <p className="pl-7 font-dm text-[14px] text-neutral-500">
             Make it even more special by adding these popular items.
           </p>
         </div>

@@ -18,12 +18,12 @@ export default function AddItemCard({ image, name, price, onAdd }: Props) {
         </div>
 
         <div className="p-3">
-          <p className="line-clamp-2 font-dm text-[8px] font-medium text-[#8C8C8C]">
+          <p className="line-clamp-2 font-dm text-[12px] font-medium text-[#8C8C8C]">
             {name}
           </p>
 
-          <div className="flex items-center justify-between">
-            <span className="font-dm text-[10px] font-bold text-primary">
+          <div className="flex items-center justify-between my-2">
+            <span className="font-dm text-[14px] font-bold text-primary">
               ₹{price}
             </span>
 
@@ -32,14 +32,17 @@ export default function AddItemCard({ image, name, price, onAdd }: Props) {
               className="flex h-8 w-8 cursor-pointer text-[10px] items-center justify-center rounded-full bg-primary text-white transition hover:scale-105"
             >
               <svg
-                width="24"
-                height="24"
+                width="14"
+                height="14"
+                viewBox="0 0 20 20"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  d="M20 11.25h-7.25V4h-1.5v7.25H4v1.5h7.25V20h1.5v-7.25H20v-1.5Z"
-                  fill="#fff"
+                  d="M10 4V16M4 10H16"
+                  stroke="#fff"
+                  strokeWidth="2"
+                  strokeLinecap="round"
                 />
               </svg>
             </button>

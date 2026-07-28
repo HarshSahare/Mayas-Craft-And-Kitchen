@@ -30,37 +30,41 @@ export default function IncludedItemCard({
 
         <button
           onClick={onDecrease}
-          className="absolute cursor-pointer right-0 top-3 flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary bg-background text-primary transition"
+          className="absolute cursor-pointer right-0 top-3 flex h-8 w-8 items-center justify-center rounded-full border-2 border-primary bg-background text-primary transition"
         >
           <svg
-            width="24"
-            height="24"
+            width="14"
+            height="14"
             fill="none"
+            viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <path d="M20 11.25H4v1.5h16v-1.5Z" fill="#202023" />
+            <path d="M3 10h14v1.5H3z" fill="#202023" />
           </svg>
         </button>
 
         <button
           onClick={onIncrease}
-          className="absolute cursor-pointer bottom-3 right-0 flex h-10 w-10 items-center justify-center rounded-full border-2 border-primary bg-background text-primary transition"
+          className="absolute cursor-pointer bottom-3 right-0 flex h-8 w-8 items-center justify-center rounded-full border-2 border-primary bg-background text-primary transition"
         >
           <svg
-            width="24"
-            height="24"
+            width="14"
+            height="14"
+            viewBox="0 0 20 20"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M20 11.25h-7.25V4h-1.5v7.25H4v1.5h7.25V20h1.5v-7.25H20v-1.5Z"
-              fill="#202023"
+              d="M10 4V16M4 10H16"
+              stroke="#202023"
+              strokeWidth="2"
+              strokeLinecap="round"
             />
           </svg>
         </button>
       </div>
 
-      <p className=" line-clamp-2 font-dm text-[8px] leading-5 text-primary">
+      <p className=" line-clamp-2 font-dm text-[12px] leading-5 text-primary">
         {name}
       </p>
 

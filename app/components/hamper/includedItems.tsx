@@ -62,14 +62,14 @@ export default function IncludedItems() {
     <section className="mt-10">
       <div className="mb-6 flex items-end justify-between">
         <div>
-          <h2 className="font-dm text-[12px] font-bold text-primary">
-            <span className="mr-2 inline-flex h-4 w-4 items-center justify-center rounded-full bg-primary text-sm text-white">
+          <h2 className="font-dm text-4 font-bold text-primary">
+            <span className="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full bg-primary text-sm text-white">
               1
             </span>
             Included in this hamper
           </h2>
 
-          <p className="text-[10px] pl-6 font-dm  text-neutral-500">
+          <p className="text-[14px] pl-7 font-dm  text-neutral-500">
             These items come with your selected hamper.
           </p>
         </div>

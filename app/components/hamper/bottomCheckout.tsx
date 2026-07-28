@@ -17,12 +17,12 @@ export default function BottomCheckout({
         <div className="flex items-center justify-between px-4 py-2">
           <div>
             <div className="mt-1 flex items-center gap-2">
-              <span className="font-dm text-[16px] font-bold text-primary">
+              <span className="font-dm text-[20px] font-bold text-primary">
                 ₹{total}
               </span>
 
               {originalTotal && originalTotal > total && (
-                <span className="font-dm text-[8px] text-neutral-400 line-through">
+                <span className="font-dm text-[12px] text-neutral-400 line-through">
                   ₹{originalTotal}
                 </span>
               )}
@@ -31,7 +31,7 @@ export default function BottomCheckout({
 
           <button
             onClick={onCheckout}
-            className="rounded-full bg-primary px-4 py-2 font-dm text-[10px] font-semibold text-white transition hover:opacity-90 active:scale-95"
+            className="rounded-full bg-primary px-4 py-2 font-dm text-[14px] font-semibold text-white transition hover:opacity-90 active:scale-95"
           >
             Buy Now
           </button>
