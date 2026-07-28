@@ -10,10 +10,10 @@ function HeroSection() {
       </div>
       <div className="flex">
         <div className="flex py-2 flex-col flex-1">
-          <div className="font-dancing font-bold text-[32px] text-[#4A2E2B]">
+          <div className="font-dancing font-bold text-[60px] text-[#4A2E2B]">
             Custom
           </div>
-          <div className="font-dm text-[27px] font-semibold text-[#4A2E2B] leading-4 tracking-[-1%] my-4">
+          <div className="font-dm text-[27px] font-semibold text-[#4A2E2B] leading-4 tracking-[-1%] my-2">
             Gift Hampers
           </div>
 
