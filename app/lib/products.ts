@@ -31,4 +31,4 @@ export const Products: ProductsType[] = [
     price: 249,
     description: "No color option",
   },
-];
+] as const;

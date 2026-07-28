@@ -1,0 +1,35 @@
+.loader-bar {
+    animation: loader 5s ease-in-out infinite;
+}
+
+@keyframes loader {
+
+    /* Expand → */
+    0% {
+        left: 0%;
+        width: 0%;
+    }
+
+    25% {
+        left: 0%;
+        width: 100%;
+    }
+
+    /* Shrink from left */
+    50% {
+        left: 100%;
+        width: 0%;
+    }
+
+    /* Expand ← */
+    75% {
+        left: 0%;
+        width: 100%;
+    }
+
+    /* Shrink from right */
+    100% {
+        left: 0%;
+        width: 0%;
+    }
+}
