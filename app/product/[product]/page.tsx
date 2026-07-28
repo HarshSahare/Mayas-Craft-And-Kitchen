@@ -22,7 +22,7 @@ export default async function ProductPage({ params }: Props) {
 
   return (
     <main className="bg-background">
-      <div className="mx-auto max-w-md px-4 py-4">
+      <div className="mx-auto max-w-md py-4">
         <ProductGallery images={item.images} />
 
         <ProductDetails product={item} />
