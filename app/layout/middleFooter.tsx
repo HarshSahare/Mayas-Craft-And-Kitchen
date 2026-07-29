@@ -59,7 +59,7 @@ function MiddleFooter() {
       </div>
 
       <div className="mx-4.5 text-[12px] text-center">
-        Near Futala Lake, Nagpur, Maharashtra 440001
+        Near Kamal Chowk, Nagpur, Maharashtra 440001
       </div>
     </>
   );

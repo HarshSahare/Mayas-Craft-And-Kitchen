@@ -79,7 +79,7 @@ ${customMessage || "No Custom message"}%0A%0A
 Please confirm my order.
 `;
 
-  const basePack = included.every((item) => item.quantity == 1);
+  const basePack = included.every((item) => item.quantity >= 1);
   console.log(basePack);
 
   return (
