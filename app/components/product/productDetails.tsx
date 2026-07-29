@@ -13,7 +13,7 @@ export default function ProductDetails({ product }: Props) {
             <h2 className="text-[20px] font-bold">₹{product.price}</h2>
 
             <span className="text-gray-400 text-[11px] line-through mt-1">
-              ₹200{product.oldPrice}
+              ₹{product.oldPrice}
             </span>
           </div>
         </div>
