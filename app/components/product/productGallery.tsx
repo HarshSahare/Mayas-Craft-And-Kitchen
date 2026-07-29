@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "./productGallery.css";
 
 type Props = {
@@ -10,10 +10,39 @@ type Props = {
 
 export default function ProductGallery({ images }: Props) {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
+
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    console.log("start");
+    touchStartX.current = e.changedTouches[0].clientX;
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
+    console.log("end");
+    touchEndX.current = e.changedTouches[0].clientX;
+
+    const distance = touchStartX.current - touchEndX.current;
+    const minSwipeDistance = 50;
+
+    if (Math.abs(distance) < minSwipeDistance) return;
+
+    if (distance > 0) {
+      // Swipe Left → Next image
+      setSelectedIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    } else {
+      // Swipe Right → Previous image
+      setSelectedIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    }
+  };
 
   return (
     <section>
-      <div className="relative overflow-hidden rounded-lg">
+      <div
+        className="relative overflow-hidden rounded-lg"
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+      >
         <Image
           src={images[selectedIndex]}
           alt={`Product Image ${selectedIndex + 1}`}
