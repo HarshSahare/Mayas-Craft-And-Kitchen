@@ -203,11 +203,9 @@ export default function SummarySection({
                   Total
                 </span>
 
-                {discount != 0 && (
-                  <span className="font-dm text-xl font-bold text-primary">
-                    ₹{Math.max(0, total - discount)}
-                  </span>
-                )}
+                <span className="font-dm text-xl font-bold text-primary">
+                  ₹{Math.max(0, total - discount)}
+                </span>
               </div>
             </div>
           </div>
