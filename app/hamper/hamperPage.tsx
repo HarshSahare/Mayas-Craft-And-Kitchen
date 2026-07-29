@@ -79,6 +79,9 @@ ${customMessage || "No Custom message"}%0A%0A
 Please confirm my order.
 `;
 
+  const basePack = included.every((item) => item.quantity == 1);
+  console.log(basePack);
+
   return (
     <main className="bg-background">
       <Hero image="/images/hamper.png" />
@@ -94,7 +97,11 @@ Please confirm my order.
       />
       <HelpBanner info={message} />
       {/* <SummaryBar /> */}
-      <BottomCheckout total={total} info={message} />
+      <BottomCheckout
+        total={basePack ? total - 51 : total}
+        originalTotal={total}
+        info={message}
+      />
     </main>
   );
 }

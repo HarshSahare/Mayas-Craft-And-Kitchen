@@ -25,7 +25,7 @@ export default function IncludedItemCard({
           alt={name}
           width={101}
           height={118}
-          className="w-full object-cover rounded-2xl"
+          className="w-[200px] aspect-square object-cover rounded-2xl"
         />
 
         <button
