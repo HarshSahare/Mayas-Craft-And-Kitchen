@@ -30,7 +30,7 @@ export default function IncludedItemCard({
 
         <button
           onClick={onDecrease}
-          className="absolute cursor-pointer right-0 top-3 flex h-8 w-8 items-center justify-center rounded-full border-2 border-primary bg-background text-primary transition"
+          className="absolute cursor-pointer right-0 top-0 flex h-8 w-8 items-center justify-center rounded-full border-2 border-primary bg-background text-primary transition"
         >
           <svg
             width="14"
@@ -45,7 +45,7 @@ export default function IncludedItemCard({
 
         <button
           onClick={onIncrease}
-          className="absolute cursor-pointer bottom-3 right-0 flex h-8 w-8 items-center justify-center rounded-full border-2 border-primary bg-background text-primary transition"
+          className="absolute cursor-pointer bottom-0 right-0 flex h-8 w-8 items-center justify-center rounded-full border-2 border-primary bg-background text-primary transition"
         >
           <svg
             width="14"
