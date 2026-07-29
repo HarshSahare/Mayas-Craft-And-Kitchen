@@ -4,6 +4,7 @@ import { dancingScript, dmSans } from "./lib/fonts";
 import Footer from "./layout/footer";
 import MainLoader from "./components/mainLoader";
 import Navbar from "./layout/navbar";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -20,6 +21,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-KT0PF5RDET"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-KT0PF5RDET');
+          `}
+        </Script>
+      </head>
       <body className={`${dmSans.variable} ${dancingScript.variable}`}>
         <MainLoader>
           <Navbar />
