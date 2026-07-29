@@ -1,16 +1,17 @@
 "use client";
 
+import Link from "next/link";
+
 type Props = {
   total: number;
   originalTotal?: number;
-  onCheckout?: () => void;
+  info?: string;
 };
 
-export default function BottomCheckout({
-  total,
-  originalTotal,
-  onCheckout,
-}: Props) {
+export default function BottomCheckout({ total, originalTotal, info }: Props) {
+  const link = process.env.NEXT_PUBLIC_WP_LINK;
+  const base_url = process.env.NEXT_PUBLIC_SITE_URL;
+
   return (
     <div className="fixed inset-x-0 bottom-0 z-50">
       <div className="mx-auto max-w-screen-md rounded-t-lg border-t border-neutral-200 bg-white shadow-[0_-8px_24px_rgba(0,0,0,0.08)]">
@@ -29,12 +30,13 @@ export default function BottomCheckout({
             </div>
           </div>
 
-          <button
-            onClick={onCheckout}
+          <Link
+            href={`${link}link: ${base_url}/hamper%0A${info}`}
+            target="_blank"
             className="rounded-full bg-primary px-4 py-2 font-dm text-[14px] font-semibold text-white transition hover:opacity-90 active:scale-95"
           >
             Buy Now
-          </button>
+          </Link>
         </div>
       </div>
     </div>

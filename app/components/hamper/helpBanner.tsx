@@ -1,8 +1,15 @@
 import Image from "next/image";
+import Link from "next/link";
 
-export default function HelpBanner() {
+export default function HelpBanner({ info }: { info: string }) {
+  const link = process.env.NEXT_PUBLIC_WP_LINK;
+
   return (
-    <section className="mt-4">
+    <Link
+      href={`${link}I want to know what all things can we add to the hamper%0ACurrent Selected Till Now:%0A%0A ${info}`}
+      target="_blank"
+      className="mt-4"
+    >
       <div className="rounded-sm bg-primary text-[12px] items-center py-[12px] px-4 text-[#FFF8F4] flex">
         <Image src="/svg/idea_icon.svg" width={20} height={20} alt="" />
         <h2 className="ml-1 font-dm font-medium leading-tight">
@@ -33,6 +40,6 @@ export default function HelpBanner() {
           />
         </svg>
       </div>
-    </section>
+    </Link>
   );
 }

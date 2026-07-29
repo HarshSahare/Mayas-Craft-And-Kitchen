@@ -48,12 +48,37 @@ export default function HamperPage() {
     );
   };
 
-  const total = included.reduce(
-    (sum, item) => sum + item.price * item.quantity,
-    0,
-  ) + addons.reduce((sum,item) => sum + (item.price * item.quantity) , 0);
+  const total =
+    included.reduce((sum, item) => sum + item.price * item.quantity, 0) +
+    addons.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   const [customMessage, setCustomMessage] = useState("");
+
+  const message = `*New Hamper Order*%0A%0A
+*Included Items*%0A
+${included
+  .filter((item) => item.quantity > 0)
+  .map((item) => `• ${item.name} × ${item.quantity}`)
+  .join("%0A")}%0A%0A
+*Added Items*%0A
+${
+  addons.filter((item) => item.quantity > 0).length
+    ? addons
+        .filter((item) => item.quantity > 0)
+        .map((item) => `• ${item.name} × ${item.quantity}`)
+        .join("%0A")
+    : "None"
+}%0A%0A
+
+*Custom Message*%0A
+${customMessage || "No Custom message"}%0A%0A
+
+*Total*%0A
+₹${total}%0A%0A
+
+Please confirm my order.
+`;
+
   return (
     <main className="bg-background">
       <Hero image="/images/hamper.png" />
@@ -67,9 +92,28 @@ export default function HamperPage() {
         customMessage={customMessage}
         setCustomMessage={setCustomMessage}
       />
-      <HelpBanner />
+      <HelpBanner info={message} />
       {/* <SummaryBar /> */}
-      <BottomCheckout total={total} />
+      <BottomCheckout total={total} info={message} />
     </main>
   );
+}
+
+export async function generateMetadata() {
+  return {
+    title: "Create Your Personalized Gift Hamper | Maya's Kitchen",
+    description:
+      "Handpick your favorite treats, add a personal message, and create a beautiful gift hamper for any special occasion.",
+
+    openGraph: {
+      title: "Create Your Personalized Gift Hamper | Maya's Kitchen",
+      description:
+        "Handpick your favorite treats, add a personal message, and create a beautiful gift hamper for any special occasion.",
+      images: "/images/hamper.png",
+    },
+
+    alternates: {
+      canonical: `/hamper`,
+    },
+  };
 }
