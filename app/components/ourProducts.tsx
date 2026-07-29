@@ -16,6 +16,9 @@ function OurProducts() {
             name={p.name}
             image={p.images[0]}
             currentPrice={p.price}
+            oldPrice={p.oldPrice}
+            rating={p.rating}
+            sold={p.sold}
           />
         ))}
       </div>

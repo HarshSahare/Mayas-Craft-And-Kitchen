@@ -22,7 +22,9 @@ export const Products: ProductsType[] = [
       "/images/product_1_5.png",
     ],
     price: 120,
-    rating: 2,
+    oldPrice: 180,
+    rating: 3,
+    sold: 7,
     description:
       "Made from premium-quality silicone, this friendship wrist band offers a comfortable fit and a stylish way to celebrate your special bond.",
     highlights: [
@@ -34,7 +36,7 @@ export const Products: ProductsType[] = [
   },
   {
     id: 2,
-    name: "Beaded bracelet with heart shape charm",
+    name: "4 pieces of Beaded bracelet with heart shape charm",
     images: [
       "/images/product_2_1.jpeg",
       "/images/product_2_2.png",
@@ -43,6 +45,9 @@ export const Products: ProductsType[] = [
       "/images/product_2_5.png",
     ],
     price: 300,
+    rating: 4,
+    sold: 15,
+    oldPrice: 400,
     description:
       "Designed with colorful beads and a delicate heart-shaped charm, this bracelet adds a playful yet elegant touch to your everyday style",
     highlights: [
@@ -64,6 +69,9 @@ export const Products: ProductsType[] = [
       "/images/product_3_5.png",
     ],
     price: 249,
+    rating: 5,
+    sold: 20,
+    oldPrice: 299,
     description:
       "A heartfelt collection of 101 thoughtful reasons that express love and appreciation, making it a meaningful keepsake for your special someone.",
     highlights: [
