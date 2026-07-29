@@ -30,7 +30,7 @@ export default async function ProductPage({ params }: Props) {
         <ProductFeatures />
       </div>
 
-      <BottomBar price={item.price} originalPrice={20} />
+      <BottomBar price={item.price} originalPrice={20}  item={item}/>
     </main>
   );
 }
