@@ -5,16 +5,14 @@ import { useState } from "react";
 const MAX_CHARACTERS = 500;
 
 export default function CustomizationSection({
-    customMessage,
-    setCustomMessage
+  customMessage,
+  setCustomMessage,
 }: {
-    customMessage: string,
-    setCustomMessage: (value:string) => void;
+  customMessage: string;
+  setCustomMessage: (value: string) => void;
 }) {
-  
-
   return (
-    <section className="mt-8">
+    <section className="mt-8 mb-4">
       <div className="mb-4">
         <h2 className="font-dm text-4 font-bold text-primary">
           <span className="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full bg-primary text-sm text-white">
@@ -45,6 +43,11 @@ export default function CustomizationSection({
           </span>
         </div>
       </div>
+      {customMessage && (
+        <div className="text-red-500 font-dm text-xs text-center">
+          Price may vary according to the customization
+        </div>
+      )}
     </section>
   );
 }

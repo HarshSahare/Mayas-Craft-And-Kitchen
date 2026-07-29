@@ -8,7 +8,6 @@ export default function HelpBanner({ info }: { info: string }) {
     <Link
       href={`${link}I want to know what all things can we add to the hamper%0ACurrent Selected Till Now:%0A%0A ${info}`}
       target="_blank"
-      className="mt-4"
     >
       <div className="rounded-sm bg-primary text-[12px] items-center py-[12px] px-4 text-[#FFF8F4] flex">
         <Image src="/svg/idea_icon.svg" width={20} height={20} alt="" />
