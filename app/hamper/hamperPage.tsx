@@ -12,6 +12,7 @@ import {
   IncludedItemsData,
 } from "../lib/hamperData";
 import IncludedItems from "../components/hamper/includedItems";
+import SummarySection from "../components/hamper/summarySection";
 
 function HamperPage() {
   const [included, setIncluded] =
@@ -48,39 +49,48 @@ function HamperPage() {
     );
   };
 
+  const decreaseAddons = (id: number) => {
+    setAddons((prev) =>
+      prev.map((item) =>
+        item.id == id
+          ? { ...item, quantity: Math.max(item.quantity - 1, 0) }
+          : item,
+      ),
+    );
+  };
+
   const total =
     included.reduce((sum, item) => sum + item.price * item.quantity, 0) +
     addons.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   const [customMessage, setCustomMessage] = useState("");
 
-  const message = `*New Hamper Order*%0A%0A
-*Included Items*%0A
-${included
-  .filter((item) => item.quantity > 0)
-  .map((item) => `• ${item.name} × ${item.quantity}`)
-  .join("%0A")}%0A%0A
-*Added Items*%0A
-${
-  addons.filter((item) => item.quantity > 0).length
-    ? addons
-        .filter((item) => item.quantity > 0)
-        .map((item) => `• ${item.name} × ${item.quantity}`)
-        .join("%0A")
-    : "None"
-}%0A%0A
-
-*Custom Message*%0A
-${customMessage || "No Custom message"}%0A%0A
-
-*Total*%0A
-₹${total}%0A%0A
-
-Please confirm my order.
-`;
-
   const basePack = included.every((item) => item.quantity >= 1);
-  console.log(basePack);
+
+  const message = `*New Hamper Order*%0A%0A
+    *Included Items*%0A
+    ${included
+      .filter((item) => item.quantity > 0)
+      .map((item) => `• ${item.name} × ${item.quantity}`)
+      .join("%0A")}%0A%0A
+    *Added Items*%0A
+    ${
+      addons.filter((item) => item.quantity > 0).length
+        ? addons
+            .filter((item) => item.quantity > 0)
+            .map((item) => `• ${item.name} × ${item.quantity}`)
+            .join("%0A")
+        : "None"
+    }%0A%0A
+
+    *Custom Message*%0A
+    ${customMessage || "No Custom message"}%0A%0A
+
+    *Total*%0A
+    ₹${basePack ? total - 51 : total}%0A%0A
+
+    Please confirm my order.
+    `;
 
   return (
     <main className="bg-background">
@@ -96,7 +106,16 @@ Please confirm my order.
         setCustomMessage={setCustomMessage}
       />
       <HelpBanner info={message} />
-      {/* <SummaryBar /> */}
+      <SummarySection
+        addons={addons.filter((item) => item.quantity > 0)}
+        included={included}
+        onDecreaseAddon={decreaseAddons}
+        onDecreaseIncluded={decreaseIncludedItems}
+        onIncreaseAddon={addAddons}
+        onIncreaseIncluded={increaseIncludedItems}
+        discount={basePack ? 51 : undefined}
+        total={total}
+      />
       <BottomCheckout
         total={basePack ? total - 51 : total}
         originalTotal={total}
