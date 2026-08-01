@@ -12,7 +12,7 @@ export type ProductsType = {
 
 export const Products: ProductsType[] = [
   {
-    id: 1,
+    id: 6,
     name: "Premium silicone friendship wrist band",
     images: [
       "/images/product_1_1.jpeg",
@@ -35,7 +35,7 @@ export const Products: ProductsType[] = [
     ],
   },
   {
-    id: 2,
+    id: 7,
     name: "4 pieces of Beaded bracelet with heart shape charm",
     images: [
       "/images/product_2_1.jpeg",
@@ -59,7 +59,7 @@ export const Products: ProductsType[] = [
     ],
   },
   {
-    id: 3,
+    id: 8,
     name: "101 reasons why I love you",
     images: [
       "/images/product_3_1.jpeg",
@@ -83,7 +83,7 @@ export const Products: ProductsType[] = [
     ],
   },
   {
-  id: 4,
+  id: 1,
   name: "Blue Mini Friendship Hamper",
   images: [
     "/images/product_4_1.png",
@@ -107,7 +107,7 @@ export const Products: ProductsType[] = [
   ],
 },
 {
-  id: 5,
+  id: 2,
   name: "Violet Mini Friendship Hamper",
   images: [
     "/images/product_5_1.png",
@@ -131,7 +131,7 @@ export const Products: ProductsType[] = [
   ],
 },
 {
-  id: 6,
+  id: 3,
   name: "Sky Blue Mini Friendship Hamper",
   images: [
     "/images/product_6_1.png",
@@ -155,7 +155,7 @@ export const Products: ProductsType[] = [
   ],
 },
 {
-  id: 7,
+  id: 4,
   name: "Pearl Mini Friendship Hamper",
   images: [
     "/images/product_7_1.png",
@@ -179,7 +179,7 @@ export const Products: ProductsType[] = [
   ],
 },
 {
-  id: 8,
+  id: 5,
   name: "Golden Mini Friendship Hamper",
   images: [
     "/images/product_8_1.png",
