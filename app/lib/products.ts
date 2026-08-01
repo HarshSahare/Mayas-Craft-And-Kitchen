@@ -86,7 +86,7 @@ export const Products: ProductsType[] = [
   id: 4,
   name: "Blue Mini Friendship Hamper",
   images: [
-    "/images/product_4_1.jpeg",
+    "/images/product_4_1.png",
     "/images/product_4_2.png",
     "/images/product_4_3.png",
     "/images/product_4_4.png",
@@ -110,7 +110,7 @@ export const Products: ProductsType[] = [
   id: 5,
   name: "Violet Mini Friendship Hamper",
   images: [
-    "/images/product_5_1.jpeg",
+    "/images/product_5_1.png",
     "/images/product_5_2.png",
     "/images/product_5_3.png",
     "/images/product_5_4.png",
@@ -134,7 +134,7 @@ export const Products: ProductsType[] = [
   id: 6,
   name: "Sky Blue Mini Friendship Hamper",
   images: [
-    "/images/product_6_1.jpeg",
+    "/images/product_6_1.png",
     "/images/product_6_2.png",
     "/images/product_6_3.png",
     "/images/product_6_4.png",
@@ -158,7 +158,7 @@ export const Products: ProductsType[] = [
   id: 7,
   name: "Pearl Mini Friendship Hamper",
   images: [
-    "/images/product_7_1.jpeg",
+    "/images/product_7_1.png",
     "/images/product_7_2.png",
     "/images/product_7_3.png",
     "/images/product_7_4.png",
@@ -182,7 +182,7 @@ export const Products: ProductsType[] = [
   id: 8,
   name: "Golden Mini Friendship Hamper",
   images: [
-    "/images/product_8_1.jpeg",
+    "/images/product_8_1.png",
     "/images/product_8_2.png",
     "/images/product_8_3.png",
     "/images/product_8_4.png",
