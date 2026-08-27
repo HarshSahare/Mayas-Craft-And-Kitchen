@@ -14,12 +14,10 @@ export default function ProductGallery({ images }: Props) {
   const touchEndX = useRef(0);
 
   const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
-    console.log("start");
     touchStartX.current = e.changedTouches[0].clientX;
   };
 
   const handleTouchEnd = (e: React.TouchEvent<HTMLDivElement>) => {
-    console.log("end");
     touchEndX.current = e.changedTouches[0].clientX;
 
     const distance = touchStartX.current - touchEndX.current;
