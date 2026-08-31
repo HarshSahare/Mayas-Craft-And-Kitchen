@@ -50,7 +50,10 @@ function OptionsSection({
                 return (
                   <OptionsItem
                     selected={
-                      optionParams
+                      optionParams &&
+                      Number(optionParams.at(index)) - 1 <
+                        input.options.length &&
+                      Number(optionParams.at(index)) - 1 >= 0
                         ? Number(optionParams.at(index)) - 1 === optionIndex
                         : optionIndex === 0
                     }

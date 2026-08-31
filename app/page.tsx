@@ -1,6 +1,8 @@
 import HeroSection from "./components/heroSection";
 import HomepageStickyComponent from "./components/homepageStickyComponent";
-import OurProducts from "./components/ourProducts";
+import ProductsSection from "./components/ProductsSection";
+import { EmbroideryArtProducts } from "./lib/embroidery_art";
+import { Products } from "./lib/products";
 
 export default function Home() {
   return (
@@ -12,7 +14,16 @@ export default function Home() {
         </div>
       </HomepageStickyComponent>
       <HeroSection />
-      <OurProducts />
+      <ProductsSection
+        title="Our Products"
+        products={Products}
+        base_url="/product/"
+      />
+      <ProductsSection
+        title="Embroidery Art"
+        products={EmbroideryArtProducts}
+        base_url="/product/embroidery-art"
+      />
     </>
   );
 }

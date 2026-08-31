@@ -1,15 +1,24 @@
 import React from "react";
 import ProductCard from "./productCard";
-import { Products } from "../lib/products";
+import { Products, ProductsType } from "../lib/products";
+import { EmbroideryArtProductsType } from "../lib/embroidery_art";
 
-function OurProducts() {
+function ProductsSection({
+  title,
+  products,
+  base_url,
+}: {
+  title: string;
+  products: ProductsType[] | EmbroideryArtProductsType[];
+  base_url: string;
+}) {
   return (
     <div className="my-4">
       <div className="text-[16px] font-black font-dm text-[#2B2B2B] my-2 ">
-        Our Products
+        {title}
       </div>
       <div className="grid grid-cols-2 gap-4">
-        {Products.map((p) => (
+        {products.map((p) => (
           <ProductCard
             key={p.id}
             id={p.id}
@@ -19,6 +28,7 @@ function OurProducts() {
             oldPrice={p.oldPrice}
             rating={p.rating}
             sold={p.sold}
+            base_url={base_url}
           />
         ))}
       </div>
@@ -26,4 +36,4 @@ function OurProducts() {
   );
 }
 
-export default OurProducts;
+export default ProductsSection;

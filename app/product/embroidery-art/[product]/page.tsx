@@ -15,16 +15,34 @@ type Props = {
   params: Promise<{
     product: string;
   }>;
+  searchParams: Promise<{ inputs?: string }>;
 };
 
-async function page({ params }: Props) {
+async function page({ params, searchParams }: Props) {
   const { product } = await params;
+  const { inputs } = await searchParams;
 
   const [key] = product.split("-");
 
   const item = EmbroideryArtProducts.find((p) => p.id === Number(key));
 
   if (!item) notFound();
+
+  const selectedInputs =
+    inputs ?? "1".repeat(item.inputs ? item.inputs.length : 0);
+  const link = process.env.NEXT_PUBLIC_WP_LINK;
+  const base_url = process.env.NEXT_PUBLIC_SITE_URL;
+
+  let optionWpText = "";
+
+  item.inputs?.map((input, index) => {
+    const number_input = Number(selectedInputs.charAt(index)) - 1;
+    if (number_input >= 0 && item.inputs && number_input < item.inputs?.length)
+      optionWpText += `${input.title} : ${input.options[number_input].option} , *₹${input.options[number_input].price}*%0A`;
+    else
+      optionWpText += `${input.title} : ${input.options[0].option} , *₹${input.options[0].price}*%0A`;
+  });
+
 
   return (
     <main className="bg-background">
@@ -42,7 +60,7 @@ async function page({ params }: Props) {
       <BottomBar
         price={item.price}
         originalPrice={item.oldPrice}
-        item={{ ...item, highlights: [] }}
+        buyLink={`${link}link: ${base_url}/product/embrodiery-art/${item.id}-${item.name.toLocaleLowerCase().split(" ").join("-")}%0AName: ${item.name}%0APrice: ${item.price}%0A${optionWpText}`}
       />
     </main>
   );
