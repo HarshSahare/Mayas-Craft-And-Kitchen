@@ -126,7 +126,7 @@ export default function WhyYoullLoveIt() {
             gap-1.5
             whitespace-nowrap
             font-dm
-            text-[10px]
+            text-[14px]
             font-semibold
           "
         >
