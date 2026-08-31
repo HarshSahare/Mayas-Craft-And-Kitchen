@@ -30,7 +30,10 @@ async function page({ params }: Props) {
         <ProductDetails product={item} />
         <OptionsSection inputs={item.inputs || []} />
         <WhyYoullLoveIt />
-        <DropDownDetail />
+        <DropDownDetail
+          productDetails={item.productDetails}
+          careInstructions={item.careInstructions}
+        />
       </div>
 
       <BottomBar

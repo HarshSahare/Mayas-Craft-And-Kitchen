@@ -47,7 +47,7 @@ export default function WhyYoullLoveIt() {
           font-semibold
           leading-[1.2]
           text-[#333333]
-          text-[12px]
+          text-[16px]
         "
       >
         Why you’ll love it
@@ -90,7 +90,7 @@ export default function WhyYoullLoveIt() {
               </div>
 
               {/* Text */}
-              <div className="mt-2 font-dm  leading-tight text-[#666666] text-[9px]">
+              <div className="mt-2 font-dm  leading-tight text-[#666666] text-[12px]">
                 <div>{feature.title}</div>
                 <div>{feature.subtitle}</div>
               </div>

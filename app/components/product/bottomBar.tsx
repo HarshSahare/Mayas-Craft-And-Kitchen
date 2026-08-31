@@ -5,9 +5,15 @@ type Props = {
   price: number;
   originalPrice?: number;
   item: ProductsType;
+  children?: React.ReactNode;
 };
 
-export default function BottomBar({ price, originalPrice, item }: Props) {
+export default function BottomBar({
+  price,
+  originalPrice,
+  item,
+  children,
+}: Props) {
   const link = process.env.NEXT_PUBLIC_WP_LINK;
   const base_url = process.env.NEXT_PUBLIC_SITE_URL;
   return (
@@ -19,6 +25,7 @@ export default function BottomBar({ price, originalPrice, item }: Props) {
             <span className="text-sm text-gray-400 line-through">
               ₹{originalPrice}
             </span>
+            {children}
           </div>
         </div>
 

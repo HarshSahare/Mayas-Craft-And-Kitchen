@@ -8,6 +8,8 @@ export type EmbroideryArtProductsType = {
   rating?: number;
   sold?: number;
   inputs?: EmbroideryArtProductsInputType[];
+  careInstructions?: string;
+  productDetails?: string[];
 };
 
 export type EmbroideryArtProductsInputType = {
@@ -45,6 +47,20 @@ export const EmbroideryArtProducts: EmbroideryArtProductsType[] = [
           { option: "13 Inch", price: 2500 },
         ],
       },
+    ],
+    careInstructions: `
+      <p>Keep away from moisture and direct sunlight.</p>
+      <p className="mt-1">Dust gently with a soft, dry cloth.</p>
+      `,
+    productDetails: [
+      "Material: Cotton Fabric & Wooden Hoop",
+      "Work: Hand Embroidery",
+      "Size: 10 × 3 inches",
+      "Colour: Multicolour",
+      "Net Quantity: 1",
+      "Handmade & Unique",
+      "Suitable for: Home Decor & Gifting",
+      "Occasion: Birthdays, Anniversaries, Wedding, Housewarming, Naming Ceremony & Special Occasions",
     ],
   },
 ];

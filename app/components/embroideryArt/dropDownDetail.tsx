@@ -5,150 +5,158 @@ import { HeartAngleIcon } from "@solar-icons/react/linear/heart-angle";
 import { AltArrowDownIcon } from "@solar-icons/react/linear/alt-arrow-down";
 import { AltArrowUpIcon } from "@solar-icons/react/linear/alt-arrow-up";
 import { AltArrowUpOutlineIcon } from "@solar-icons/react";
+import { EmbroideryArtProductsType } from "@/app/lib/embroidery_art";
 
-export default function DropDownDetail() {
+export default function DropDownDetail({
+  productDetails,
+  careInstructions,
+}: {
+  productDetails?: string[];
+  careInstructions?: string;
+}) {
   const [detailsOpen, setDetailsOpen] = useState(true);
   const [careOpen, setCareOpen] = useState(true);
 
   return (
     <section className="w-full text-[#555]">
-      <div className="border rounded-xl border-[#FED1D1] my-2">
-        {/* Header */}
-        <button
-          type="button"
-          onClick={() => setDetailsOpen(!detailsOpen)}
-          className="
+      {productDetails && productDetails.length > 0 && (
+        <div className="border rounded-xl border-[#FED1D1] my-2">
+          {/* Header */}
+          <button
+            type="button"
+            onClick={() => setDetailsOpen(!detailsOpen)}
+            className="
             flex w-full items-center justify-between
             px-3 py-3
             text-left
           "
-        >
-          <div className="flex items-center gap-2">
-            <span className="text-[#333]">
-              <FileTextIcon size={12} color="#FE7C8E" />
-            </span>
+          >
+            <div className="flex items-center gap-2">
+              <span className="text-[#333]">
+                <FileTextIcon size={14} color="#FE7C8E" />
+              </span>
 
-            <span
-              className="
-                text-[10px]
-                font-bold
+              <span
+                className="
+                text-[16px]
+                font-semibold
                 font-sans
                 leading-none
                 text-[#333]
               "
-            >
-              Product Details
-            </span>
-          </div>
+              >
+                Product Details
+              </span>
+            </div>
 
-          {detailsOpen ? (
-            <AltArrowUpIcon
-              className="h-3.5 w-3.5 text-[#777]"
-              strokeWidth={1.5}
-            />
-          ) : (
-            <AltArrowDownIcon
-              className="h-3.5 w-3.5 text-[#777]"
-              strokeWidth={1.5}
-            />
-          )}
-        </button>
+            {detailsOpen ? (
+              <AltArrowUpIcon
+                className="h-3.5 w-3.5 text-[#777]"
+                strokeWidth={1.5}
+              />
+            ) : (
+              <AltArrowDownIcon
+                className="h-3.5 w-3.5 text-[#777]"
+                strokeWidth={1.5}
+              />
+            )}
+          </button>
 
-        {/* Content */}
-        {detailsOpen && (
-          <div
-            className="
+          {/* Content */}
+          {detailsOpen && (
+            <div
+              className="
               grid grid-cols-2 gap-x-8 gap-y-1
               px-3 pb-3
-              text-[8px]
+              text-[12px]
               leading-[1.45]
               text-[#666]
             "
-          >
-            <div className="space-y-1">
-              <p>• Material: Cotton Fabric &amp; Wooden Hoop</p>
+            >
+              <ul className="space-y-1 list-disc pl-4">
+                {productDetails
+                  ?.filter((detail, index) => index % 2 !== 0)
+                  .map((detail, index) => (
+                    <li
+                      key={index}
+                      dangerouslySetInnerHTML={{ __html: detail }}
+                    ></li>
+                  ))}
+              </ul>
 
-              <p>• Work: Hand Embroidery</p>
-
-              <p>• Size: 10 × 3 inches</p>
-
-              <p>• Colour: Multicolour</p>
-
-              <p>• Net Quantity: 1</p>
+              <ul className="space-y-1 list-disc">
+                {productDetails
+                  ?.filter((detail, index) => index % 2 === 0)
+                  .map((detail, index) => (
+                    <li
+                      key={index}
+                      dangerouslySetInnerHTML={{ __html: detail }}
+                    ></li>
+                  ))}
+              </ul>
             </div>
+          )}
+        </div>
+      )}
 
-            <div className="space-y-1">
-              <p>• Handmade &amp; Unique</p>
-
-              <p>• Suitable for: Home Decor &amp; Gifting</p>
-
-              <p>
-                • Occasion: Birthdays, Anniversaries, Wedding, Housewarming,
-                Naming Ceremony &amp; Special Occasions
-              </p>
-            </div>
-          </div>
-        )}
-      </div>
-
-      <div className="border rounded-xl border-[#FED1D1]">
-        <button
-          type="button"
-          onClick={() => setCareOpen(!careOpen)}
-          className="
+      {careInstructions && (
+        <div className="border rounded-xl border-[#FED1D1]">
+          <button
+            type="button"
+            onClick={() => setCareOpen(!careOpen)}
+            className="
             flex w-full items-center justify-between
             px-3 py-3
             text-left
           "
-        >
-          <div className="flex items-center gap-2">
-            <HeartAngleIcon
-              className="h-3.5 w-3.5 text-[#FE7C8E]"
-              strokeWidth={1.4}
-            />
+          >
+            <div className="flex items-center gap-2">
+              <HeartAngleIcon
+                className="text-[#FE7C8E]"
+                size={14}
+                strokeWidth={1.4}
+              />
 
-            <span
-              className="
-               text-[10px]
-                font-bold
+              <span
+                className="
+               text-[16px]
+                font-semibold
                 font-sans
                 leading-none
-                text-[#333]
+                text-[#2F2F30]
               "
-            >
-              Care Instructions
-            </span>
-          </div>
+              >
+                Care Instructions
+              </span>
+            </div>
 
-          {careOpen ? (
-            <AltArrowUpOutlineIcon
-              className="h-3.5 w-3.5 text-[#777]"
-              strokeWidth={1.5}
-            />
-          ) : (
-            <AltArrowDownIcon
-              className="h-3.5 w-3.5 text-[#777]"
-              strokeWidth={1.5}
-            />
-          )}
-        </button>
+            {careOpen ? (
+              <AltArrowUpOutlineIcon
+                className="h-3.5 w-3.5 text-[#777]"
+                strokeWidth={1.5}
+              />
+            ) : (
+              <AltArrowDownIcon
+                className="h-3.5 w-3.5 text-[#777]"
+                strokeWidth={1.5}
+              />
+            )}
+          </button>
 
-        {/* Content */}
-        {careOpen && (
-          <div
-            className="
+          {/* Content */}
+          {careOpen && (
+            <div
+              className="
               px-3 pb-3
-              text-[9px]
+              text-[12px]
               leading-[1.45]
-              text-[#666]
+              text-[#666666]
             "
-          >
-            <p>Keep away from moisture and direct sunlight.</p>
-
-            <p className="mt-1">Dust gently with a soft, dry cloth.</p>
-          </div>
-        )}
-      </div>
+              dangerouslySetInnerHTML={{ __html: careInstructions }}
+            ></div>
+          )}
+        </div>
+      )}
     </section>
   );
 }
