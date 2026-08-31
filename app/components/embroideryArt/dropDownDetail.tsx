@@ -33,12 +33,12 @@ export default function DropDownDetail({
           >
             <div className="flex items-center gap-2">
               <span className="text-[#333]">
-                <FileTextIcon size={14} color="#FE7C8E" />
+                <FileTextIcon size={16} color="#FE7C8E" />
               </span>
 
               <span
                 className="
-                text-[12px]
+                text-[14px]
                 font-bold
                 font-sans
                 leading-none
@@ -113,7 +113,7 @@ export default function DropDownDetail({
             <div className="flex items-center gap-2">
               <HeartAngleIcon
                 className="text-[#FE7C8E]"
-                size={14}
+                size={16}
                 strokeWidth={1.4}
               />
 
