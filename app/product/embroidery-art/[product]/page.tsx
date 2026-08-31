@@ -1,6 +1,9 @@
 import React from "react";
 import { notFound } from "next/navigation";
-import { EmbroideryArtProducts } from "@/app/lib/embroidery_art";
+import {
+  EmbroideryArtProducts,
+  EmbroideryArtProductsType,
+} from "@/app/lib/embroidery_art";
 import ProductGallery from "@/app/components/product/productGallery";
 import BottomBar from "@/app/components/product/bottomBar";
 import ProductDetails from "@/app/components/embroideryArt/productDetail";
@@ -46,3 +49,31 @@ async function page({ params }: Props) {
 }
 
 export default page;
+
+export async function generateMetadata({ params }: Props) {
+  const { product } = await params;
+
+  const [key] = product.split("-");
+
+  const item: EmbroideryArtProductsType | undefined =
+    EmbroideryArtProducts.find((p) => p.id === Number(key));
+
+  if (!item) {
+    return {};
+  }
+
+  return {
+    title: item.name,
+    description: item.description,
+
+    openGraph: {
+      title: item.name,
+      description: item.description,
+      images: item.images[0],
+    },
+
+    alternates: {
+      canonical: `/products/embroidery-art/${item.id}-${item.name}`,
+    },
+  };
+}

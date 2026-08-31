@@ -38,8 +38,8 @@ export default function DropDownDetail({
 
               <span
                 className="
-                text-[16px]
-                font-semibold
+                text-[14px]
+                font-bold
                 font-sans
                 leading-none
                 text-[#333]
@@ -119,7 +119,7 @@ export default function DropDownDetail({
 
               <span
                 className="
-               text-[16px]
+               text-[14px]
                 font-semibold
                 font-sans
                 leading-none
