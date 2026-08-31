@@ -54,15 +54,17 @@ export default function ProductDetails({ product }: Props) {
 
       <p className="text-[#8F8E8F] text-[16px]">{product.description}</p>
 
-      <div className="text-[#8F8E8F] text-[16px] mt-6">
-        <h3 className="font-semibold">Highlights</h3>
+      {product.highlights.length > 0 && (
+        <div className="text-[#8F8E8F] text-[16px] mt-6">
+          <h3 className="font-semibold">Highlights</h3>
 
-        <ul className="mt-3 list-disc pl-5 text-gray-500">
-          {product.highlights.map((highlight) => (
-            <li key={highlight}>{highlight}</li>
-          ))}
-        </ul>
-      </div>
+          <ul className="mt-3 list-disc pl-5 text-gray-500">
+            {product.highlights.map((highlight) => (
+              <li key={highlight}>{highlight}</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </section>
   );
 }
