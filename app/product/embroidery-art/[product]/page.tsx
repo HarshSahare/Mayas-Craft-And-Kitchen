@@ -62,7 +62,7 @@ async function page({ params, searchParams }: Props) {
           item.inputs?.at(0)?.options.at(Number(selectedInputs.charAt(0)) - 1)
             ?.price || item.price
         }
-        buyLink={`${link}link: ${base_url}/product/embrodiery-art/${item.id}-${item.name.toLocaleLowerCase().split(" ").join("-")}%0AName: ${item.name}%0A${optionWpText}`}
+        buyLink={`${link}link: ${base_url}/product/embroidery-art/${item.id}-${item.name.toLocaleLowerCase().split(" ").join("-")}%0AName: ${item.name}%0A${optionWpText}`}
       />
     </main>
   );
