@@ -8,7 +8,7 @@ export default function ProductDetails({ product }: Props) {
   return (
     <section className="mt-6 font-dm">
       <div className="flex justify-between">
-        <h1 className="text-[24px] font-bold">{product.name}</h1>
+        <h1 className="text-[24px] font-bold leading-tight">{product.name}</h1>
         <div className="flex items-center justify-end text-[12px] font-bold font-dm min-w-fit ">
           <svg
             width="20"
