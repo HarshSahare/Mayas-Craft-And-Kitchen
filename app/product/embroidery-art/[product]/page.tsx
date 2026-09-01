@@ -37,12 +37,12 @@ async function page({ params, searchParams }: Props) {
 
   item.inputs?.map((input, index) => {
     const number_input = Number(selectedInputs.charAt(index)) - 1;
+
     if (number_input >= 0 && item.inputs && number_input < item.inputs?.length)
       optionWpText += `${input.title} : ${input.options[number_input].option} , *₹${input.options[number_input].price}*%0A`;
     else
       optionWpText += `${input.title} : ${input.options[0].option} , *₹${input.options[0].price}*%0A`;
   });
-
 
   return (
     <main className="bg-background">
@@ -58,9 +58,11 @@ async function page({ params, searchParams }: Props) {
       </div>
 
       <BottomBar
-        price={item.price}
-        originalPrice={item.oldPrice}
-        buyLink={`${link}link: ${base_url}/product/embrodiery-art/${item.id}-${item.name.toLocaleLowerCase().split(" ").join("-")}%0AName: ${item.name}%0APrice: ${item.price}%0A${optionWpText}`}
+        price={
+          item.inputs?.at(0)?.options.at(Number(selectedInputs.charAt(0)) - 1)
+            ?.price || item.price
+        }
+        buyLink={`${link}link: ${base_url}/product/embrodiery-art/${item.id}-${item.name.toLocaleLowerCase().split(" ").join("-")}%0AName: ${item.name}%0A${optionWpText}`}
       />
     </main>
   );

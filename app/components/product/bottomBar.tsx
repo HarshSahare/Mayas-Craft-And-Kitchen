@@ -20,9 +20,11 @@ export default function BottomBar({
         <div>
           <div className="flex gap-2">
             <span className="text-3xl font-bold">₹{price}</span>
-            <span className="text-sm text-gray-400 line-through">
-              ₹{originalPrice}
-            </span>
+            {originalPrice && (
+              <span className="text-sm text-gray-400 line-through">
+                ₹{originalPrice}
+              </span>
+            )}
             {children}
           </div>
         </div>
