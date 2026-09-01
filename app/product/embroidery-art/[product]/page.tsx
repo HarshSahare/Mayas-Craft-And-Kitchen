@@ -38,7 +38,11 @@ async function page({ params, searchParams }: Props) {
   item.inputs?.map((input, index) => {
     const number_input = Number(selectedInputs.charAt(index)) - 1;
 
-    if (number_input >= 0 && item.inputs && number_input < item.inputs?.length)
+    if (
+      number_input >= 0 &&
+      item.inputs &&
+      item.inputs?.at(index)?.options.length
+    )
       optionWpText += `${input.title} : ${input.options[number_input].option} , *₹${input.options[number_input].price}*%0A`;
     else
       optionWpText += `${input.title} : ${input.options[0].option} , *₹${input.options[0].price}*%0A`;
