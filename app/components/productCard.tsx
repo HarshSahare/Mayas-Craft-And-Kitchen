@@ -8,8 +8,9 @@ function ProductCard({
   image,
   currentPrice,
   oldPrice,
-  rating=2,
+  rating = 2,
   sold,
+  base_url,
 }: {
   id: number;
   name: string;
@@ -18,10 +19,11 @@ function ProductCard({
   oldPrice?: number;
   rating?: number;
   sold?: number;
+  base_url: string;
 }) {
   return (
     <Link
-      href={`/product/${id}-${name.toLocaleLowerCase().split(" ").join("-")}`}
+      href={`${base_url}/${id}-${name.toLocaleLowerCase().split(" ").join("-")}`}
       className="w-full "
     >
       <div className="pb-2  pr-4 relative">

@@ -20,6 +20,9 @@ export default async function ProductPage({ params }: Props) {
 
   if (!item) notFound();
 
+  const link = process.env.NEXT_PUBLIC_WP_LINK;
+  const base_url = process.env.NEXT_PUBLIC_SITE_URL;
+
   return (
     <main className="bg-background">
       <div className="mx-auto max-w-md py-4">
@@ -30,7 +33,11 @@ export default async function ProductPage({ params }: Props) {
         <ProductFeatures />
       </div>
 
-      <BottomBar price={item.price} originalPrice={item.oldPrice}  item={item}/>
+      <BottomBar
+        price={item.price}
+        originalPrice={item.oldPrice}
+        buyLink={`${link}link: ${base_url}/product/${item.id}-${item.name.toLocaleLowerCase().split(" ").join("-")}%0AName: ${item.name}%0APrice: ${item.price}`}
+      />
     </main>
   );
 }
