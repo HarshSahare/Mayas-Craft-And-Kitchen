@@ -18,7 +18,7 @@ export default function ProductDetails({ product }: Props) {
           </div>
         </div>
 
-        <div className="text-right text-[10px] text-gray-500">
+        <div className="text-right text-[10px] text-gray-500 min-w-fit">
           <div className="flex items-center justify-end ">
             <svg
               width="10"
