@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import React from "react";
 import "./mainLoader.css";
 import Image from "next/image";
+import { useTheme } from "../provider/contexts/themeContext";
 
 export default function MainLoader({
   children,
@@ -13,7 +14,6 @@ export default function MainLoader({
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    // If the page has already loaded
     if (document.readyState === "complete") {
       setLoaded(true);
       return;
@@ -30,8 +30,10 @@ export default function MainLoader({
     };
   }, []);
 
+  const { theme } = useTheme();
+
   return (
-    <>
+    <div className={`${theme}`}>
       {!loaded && (
         <div className="fixed inset-0 z-999999 flex items-center justify-center bg-background">
           <div className="flex flex-col items-center gap-8">
@@ -50,6 +52,6 @@ export default function MainLoader({
       )}
 
       {children}
-    </>
+    </div>
   );
 }

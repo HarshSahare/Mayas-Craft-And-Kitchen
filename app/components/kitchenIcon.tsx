@@ -1,8 +1,4 @@
-type Props = {
-  active: boolean;
-};
-
-export default function KitchenIcon({ active }: Props) {
+export default function KitchenIcon() {
   return (
     <svg
       width="13"
@@ -10,9 +6,6 @@ export default function KitchenIcon({ active }: Props) {
       viewBox="0 0 13 17"
       xmlns="http://www.w3.org/2000/svg"
       className="transition-colors duration-300 ease-in-out"
-      style={{
-        color: active ? "#E75F73" : "#8c8c8c75",
-      }}
     >
       <path
         d="M12.6504 8.25V14.5643C12.6504 15.0034 12.476 15.4244 12.1656 15.7348C11.5831 16.3173 10.6495 16.3744 9.99051 15.8801C9.48062 15.4977 9.22199 14.8562 9.32509 14.2272C9.6441 12.281 10.2365 8.23798 9.65039 8.25C9.29742 8.25724 8.88545 8.18998 8.5256 8.05026C7.76396 7.75452 7.65039 6.83657 7.65039 6.01953C7.65039 4.20934 7.96639 2.2251 9.40743 1.12958C9.83647 0.803409 10.3232 0.553642 10.9404 0.325182C11.0784 0.274112 11.4121 0.255857 11.5592 0.258276C12.2572 0.269752 12.6504 0.82976 12.6504 1.52782V8.25Z"

@@ -37,7 +37,7 @@ body {
   margin-right: auto;
 }
 
-body>* {
+body> div >* {
   padding-left: 14px;
   padding-right: 14px;
   overflow-x: hidden;

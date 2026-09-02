@@ -1,8 +1,4 @@
-type Props = {
-  active: boolean;
-};
-
-export default function CraftIcon({ active }: Props) {
+export default function CraftIcon() {
   return (
     <svg
       width="18"
@@ -10,9 +6,6 @@ export default function CraftIcon({ active }: Props) {
       viewBox="0 0 18 18"
       xmlns="http://www.w3.org/2000/svg"
       className="transition-colors duration-300 ease-in-out"
-      style={{
-        color: active ? "#E75F73" : "#000000",
-      }}
     >
       <path
         d="M0.185547 15.4962L4.19452 8.19531L4.13316 17.9708L0.185547 15.4962Z"
