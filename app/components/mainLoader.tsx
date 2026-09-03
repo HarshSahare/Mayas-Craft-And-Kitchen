@@ -33,9 +33,9 @@ export default function MainLoader({
   const { theme } = useTheme();
 
   return (
-    <div className={`${theme}`}>
+    <div className={`${theme} max-w-125 mx-auto`}>
       {!loaded && (
-        <div className="fixed inset-0 z-999999 flex items-center justify-center bg-background">
+        <div className="fixed inset-0 z-999999 *:z-999999 flex items-center justify-center bg-background">
           <div className="flex flex-col items-center gap-8">
             <Image
               src="/images/navbar_logo.png"
@@ -50,8 +50,7 @@ export default function MainLoader({
           </div>
         </div>
       )}
-
-      {children}
+      <div className="isolate *:px-3.5 relative">{children}</div>
     </div>
   );
 }
