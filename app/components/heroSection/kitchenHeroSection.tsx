@@ -5,7 +5,7 @@ import React from "react";
 function KitchenHeroSection() {
   return (
     <div
-      className="overflow-hidden flex items-center aspect-video py-5 isolate relative after:content-[''] after:absolute after:z-1 after:w-[120%] after:h-[20%] after:translate-y-1/2  after:bg-[#FFF8F4] after:bottom-0 after:left-0 after:blur-md "
+      className="overflow-hidden flex items-center aspect-video py-10 isolate relative after:content-[''] after:absolute after:z-1 after:w-[120%] after:h-[20%]  after:bg-linear-to-b after:from-transparent  after:to-[#FFF8F4] after:bottom-0 after:left-0 "
       style={{
         background: "url('/images/kitchenHeroSection.png')",
         backgroundSize: "cover",
