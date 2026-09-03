@@ -5,6 +5,7 @@ import Footer from "./layout/footer";
 import MainLoader from "./components/mainLoader";
 import Navbar from "./layout/navbar";
 import Script from "next/script";
+import Provider from "./provider/provider";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -36,11 +37,13 @@ export default function RootLayout({
         </Script>
       </head>
       <body className={`${dmSans.variable} ${dancingScript.variable}`}>
-        <MainLoader>
-          <Navbar />
-          {children}
-          <Footer />
-        </MainLoader>
+        <Provider>
+          <MainLoader>
+            <Navbar />
+            {children}
+            <Footer />
+          </MainLoader>
+        </Provider>
       </body>
     </html>
   );

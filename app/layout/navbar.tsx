@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { usePathname } from "next/navigation";
-import "./navbar.css";
+import "./navbar.scss";
 import Image from "next/image";
 import { UserIcon } from "@solar-icons/react/outline/user";
 import { CartIcon } from "@solar-icons/react/outline/cart";
@@ -10,9 +10,11 @@ import Link from "next/link";
 function Navbar({
   className,
   ignoreHomePageRule = false,
+  sticky = true,
 }: {
   className?: string;
   ignoreHomePageRule?: boolean;
+  sticky?: boolean;
 }) {
   const pathname = usePathname();
 
@@ -24,7 +26,7 @@ function Navbar({
 
   return (
     <nav
-      className={`navbar transition-all duration-300 ${ignoreHomePageRule ? className : "bg-background"}`}
+      className={`navbar transition-all duration-300 ${sticky ? "sticky" : "relative"} ${ignoreHomePageRule ? className : "bg-background"}`}
     >
       <Link href="/" className="navbar_logo">
         <Image

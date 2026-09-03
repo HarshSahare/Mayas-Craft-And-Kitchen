@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <HomepageStickyComponent>
-        <div className="font-dm text-[20px] font-extrabold bg-navbar">
+        <div className="font-dm text-[20px] font-extrabold">
           Every Occasion Deserves
           <br /> Something Special.
         </div>

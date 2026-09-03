@@ -3,33 +3,29 @@
 import { useState } from "react";
 import CraftIcon from "./craftIcon";
 import KitchenIcon from "./kitchenIcon";
+import { useTheme } from "../provider/contexts/themeContext";
+import "./toggleSection.scss";
 
 export default function ToggleSection() {
-  const [current, setCurrent] = useState(0);
+  const { setTheme } = useTheme();
 
   return (
     <div className="flex font-dm text-[12px] font-medium overflow-hidden ">
       <button
-        onClick={() => setCurrent(0)}
-        className={`mx-auto relative flex items-center gap-1 py-2 after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-[140%] after:h-2.5 after:-translate-x-1/2 after:translate-y-1/2 after:rounded-xl after:bg-[#E75F73] after:transition-all after:duration-300 after:ease-in-out ${current === 0 ? "after:opacity-100 after:scale-100" : "after:opacity-0 after:scale-0"}`}
-        style={{
-          color: current === 0 ? "#E75F73" : "var(--foreground)",
-        }}
+        onClick={() => setTheme("craft")}
+        className={`theme-toggle-button`}
       >
-        <CraftIcon active={current === 0} />
+        <CraftIcon />
         <span>Craft</span>
       </button>
 
       <div className="w-0.5 h-3.5 my-auto bg-foreground mx-auto"></div>
 
       <button
-        // onClick={() => setCurrent(1)}
-        className={`mx-auto text-[#8c8c8c75] cursor-not-allowed relative flex items-center gap-1 py-2 after:content-[''] after:absolute after:left-1/2 after:bottom-0 after:w-[140%] after:h-2.5 after:-translate-x-1/2 after:translate-y-1/2 after:rounded-xl after:bg-[#E75F73] after:transition-all after:duration-300 after:ease-in-out ${current === 1 ? "after:opacity-100 after:scale-100" : "after:opacity-0 after:scale-0"}`}
-        // style={{
-        //   color: current === 1 ? "#E75F73" : "var(--foreground)",
-        // }}
+        onClick={() => setTheme("kitchen")}
+        className={`theme-toggle-button`}
       >
-        <KitchenIcon active={current === 1} />
+        <KitchenIcon />
         <span>Kitchen</span>
       </button>
     </div>

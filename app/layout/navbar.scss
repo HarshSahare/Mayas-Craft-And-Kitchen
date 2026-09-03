@@ -1,0 +1,85 @@
+.navbar {
+  height: var(--navbar-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0px;
+  overflow: visible;
+  z-index: 997;
+}
+
+.navbar > * {
+  z-index: 999;
+}
+
+.navbar::after {
+  content: "";
+  position: absolute;
+  z-index: 997;
+  inset: 0px;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+}
+
+.navbar-overlay {
+  right: 0px;
+  top: 0px;
+  transform: rotate(90deg) translateY(-50%) translateX(-30%);
+}
+
+.navbar-overlay-2 {
+  left: 0px;
+  top: 0px;
+  transform: rotate(90deg) translatey(80%) translateX(40%);
+}
+
+.navbar-overlay,
+.navbar-overlay-2 {
+  position: absolute;
+  z-index: 998;
+  height: 301px;
+  width: 282px;
+  opacity: 0.33;
+  pointer-events: none;
+  filter: blur(65px);
+  border-radius: 50%;
+}
+
+.craft .navbar-overlay,
+.craft .navbar-overlay-2 {
+  background-color: #ff0000;
+}
+
+.kitchen .navbar-overlay,
+.kitchen .navbar-overlay-2 {
+  background-color: #e7a96d;
+}
+
+.scroll-background::after {
+  background-color: var(--kitchen-navbar-background);
+  opacity: 1;
+}
+
+.craft {
+  .navbar-background::after {
+    background-color: var(--craft-navbar-background);
+    opacity: 1;
+  }
+}
+
+.kitchen {
+  .navbar-background::after {
+    background-color: var(--kitchen-navbar-background);
+    opacity: 1;
+  }
+}
+
+.navbar_logo > img {
+  width: 100%;
+  height: 100%;
+}
+
+.nav_buttons {
+  display: flex;
+  cursor: pointer;
+}
