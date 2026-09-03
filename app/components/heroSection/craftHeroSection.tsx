@@ -1,11 +1,10 @@
 import Image from "next/image";
-import Arrow from "@/public/svg/double_right_array_solid.svg";
 import React from "react";
 import Link from "next/link";
 
-function HeroSection() {
+function CraftHeroSection() {
   return (
-    <div className="overflow-hidden isolate relative after:content-[''] after:absolute after:z-[-2] after:w-[120%] after:h-full after:-translate-y-1/2 after:translate-x-[-10%] after:bg-[#FFC0CB] after:top-0 after:left-0 after:blur-lg before:content-[''] before:absolute before:z-[-2] before:w-[120%] before:h-[50%] before:translate-x-[-10%] before:bg-linear-to-b before:from-[#FFC0CB] before:to-background before:bg-to before:bottom-0 before:left-0 before:blur-[150px] ">
+    <div className="pr-0! overflow-hidden isolate relative after:content-[''] after:absolute after:z-[-2] after:w-[120%] after:h-full after:-translate-y-1/2 after:translate-x-[-10%] after:bg-[#FFC0CB] after:top-0 after:left-0 after:blur-lg before:content-[''] before:absolute before:z-[-2] before:w-[120%] before:h-[50%] before:translate-x-[-10%] before:bg-linear-to-b before:from-[#FFC0CB] before:to-background before:bg-to before:bottom-0 before:left-0 before:blur-[150px] ">
       <div className="-z-1 absolute inset-0 ">
         <Image src="/svg/heropage_stars.svg" fill alt="Stars"></Image>
       </div>
@@ -44,4 +43,4 @@ function HeroSection() {
   );
 }
 
-export default HeroSection;
+export default CraftHeroSection;
