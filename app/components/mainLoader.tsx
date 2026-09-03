@@ -33,7 +33,7 @@ export default function MainLoader({
   const { theme } = useTheme();
 
   return (
-    <div className={`${theme} max-w-125 mx-auto`}>
+    <div className={`${theme}`}>
       {!loaded && (
         <div className="fixed inset-0 z-999999 *:z-999999 flex items-center justify-center bg-background">
           <div className="flex flex-col items-center gap-8">
