@@ -1,8 +1,13 @@
 import React from "react";
 import { ThemeProvider } from "./contexts/themeContext";
+import CartProvider from "./contexts/cartContext";
 
 function Provider({ children }: { children: React.ReactNode }) {
-  return <ThemeProvider>{children}</ThemeProvider>;
+  return (
+    <ThemeProvider>
+      <CartProvider>{children}</CartProvider>
+    </ThemeProvider>
+  );
 }
 
 export default Provider;
