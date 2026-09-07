@@ -9,6 +9,7 @@ import PriceBox from "../../../components/kitchen/priceBox";
 import DeliveryBox from "@/app/components/kitchen/deliveryBox";
 import { KitchenProducts } from "@/app/lib/kitchen";
 import ProductInfoCards from "@/app/components/kitchen/productInfoCards";
+import { ModakProducts } from "@/app/lib/modak";
 
 type Props = {
   params: Promise<{
@@ -21,7 +22,7 @@ export default async function ProductPage({ params }: Props) {
 
   const [key] = product.split("-");
 
-  const item = KitchenProducts.find((p) => p.id === Number(key));
+  const item = KitchenProducts.find((p) => p.id === Number(key)) || ModakProducts.find((p) => p.id === Number(key));
 
   if (!item) notFound();
 

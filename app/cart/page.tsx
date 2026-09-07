@@ -2,6 +2,7 @@
 
 import { EmbroideryArtProducts } from "../lib/embroidery_art";
 import { KitchenProducts } from "../lib/kitchen";
+import { ModakProducts } from "../lib/modak";
 import { Products, ProductsType } from "../lib/products";
 import { useCartContext } from "../provider/contexts/cartContext";
 import CartItem from "./cartItems";
@@ -33,6 +34,15 @@ const CartPage = () => {
       product = KitchenProducts.find((product) => product.id === cartItem.id);
       if (product) {
         KitchenProductsCount += cartItem.quantity;
+        return {
+          ...product,
+          quantity: cartItem.quantity,
+          base_url: "product/kitchen",
+        };
+      }
+
+      product = ModakProducts.find((product) => product.id === cartItem.id);
+      if (product) {
         return {
           ...product,
           quantity: cartItem.quantity,
@@ -150,19 +160,19 @@ Thank you!`;
             {KitchenProductsCount > 1
               ? calculateNewCost(total, KitchenProductsCount)
               : total}
-            <div className="flex font-medium gap-2  text-[10px] text-[#8C8C8C] mt-1">
-              {KitchenProductsCount > 1 && (
+            {KitchenProductsCount > 1 && (
+              <div className="flex font-medium gap-2  text-[10px] text-[#8C8C8C] mt-1">
                 <div className="line-through">₹{total}</div>
-              )}
-              <span className="text-[#FF0F0F] font-bold">
-                ( Combo Discount )
-              </span>
-            </div>
+                <span className="text-[#FF0F0F] font-bold">
+                  ( Combo Discount )
+                </span>
+              </div>
+            )}
           </span>
         </div>
 
         <a
-          href={whatsappUrl}
+          href={items.length > 0 ? whatsappUrl : "#"}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-5 flex h-[50px] w-full items-center justify-center rounded-xl bg-[#4A2E2B] font-dm text-[15px] font-semibold text-white"
