@@ -137,7 +137,6 @@ export const KitchenProducts: KitchenProductsType[] = [
       "/images/product_23_2.png",
       "/images/product_23_3.png",
       "/images/product_23_4.png",
-      "/images/product_23_5.png",
     ],
     size: "200ml Glass Size",
     price: 100,
