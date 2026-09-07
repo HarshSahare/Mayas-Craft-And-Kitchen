@@ -40,9 +40,9 @@ function ProductCard({
         />
         <Image
           src="/svg/product_card_add_cart_icon.svg"
-          width={40}
-          height={40}
-          className="absolute bottom-0 right-0"
+          width={30}
+          height={30}
+          className="absolute bottom-0 aspect-square right-0"
           alt="add to cart button"
           onClick={(e) => {
             e.preventDefault();
