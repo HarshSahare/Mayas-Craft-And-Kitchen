@@ -40,8 +40,8 @@ function ProductCard({
         />
         <Image
           src="/svg/product_card_add_cart_icon.svg"
-          width={60}
-          height={60}
+          width={55}
+          height={55}
           className="absolute bottom-0 aspect-square right-0"
           alt="add to cart button"
           onClick={(e) => {
