@@ -36,7 +36,7 @@ function KitchenHeroSection() {
         </div>
 
         <Link
-          href="/hamper"
+          href="/modak"
           className="flex mt-8 z-3 items-center gap-2 bg-[#4A2E2B] w-fit font-dm font-semibold text-[10px] text-white py-2 px-4.5 rounded-lg cursor-pointer"
         >
           Order Now
