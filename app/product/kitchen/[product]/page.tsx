@@ -32,7 +32,7 @@ export default async function ProductPage({ params }: Props) {
   return (
     <main className="bg-background">
       <div className="mx-auto max-w-md py-4">
-        <ProductGallery images={item.images} showPreview={false} />
+        <ProductGallery images={item.images}  />
         <ProductInfoCards items={item.highlights} />
         <ProductDetails
           product={{

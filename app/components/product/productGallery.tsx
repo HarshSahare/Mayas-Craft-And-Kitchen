@@ -48,7 +48,7 @@ export default function ProductGallery({ images, showPreview = true }: Props) {
           width={600}
           height={600}
           priority
-          className="aspect-video w-full object-cover transition-all duration-300 bg-[#2b2b2b]"
+          className="aspect-video w-full ob ject-cover transition-all duration-300 bg-[#2b2b2b]"
         />
 
         {/* Indicator Dots */}

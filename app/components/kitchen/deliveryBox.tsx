@@ -16,7 +16,8 @@ const DeliveryBox = () => {
         </h3>
 
         <p className="text-[10px] leading-[1.3] font-medium text-[#2F2F30]">
-          We will deliver your order within 24 hours right at your doorstep
+          Free Delivery & we will deliver your order within 24 hours right at
+          your doorstep
         </p>
       </div>
     </div>
