@@ -22,7 +22,9 @@ export default async function ProductPage({ params }: Props) {
 
   const [key] = product.split("-");
 
-  const item = KitchenProducts.find((p) => p.id === Number(key)) || ModakProducts.find((p) => p.id === Number(key));
+  const item =
+    KitchenProducts.find((p) => p.id === Number(key)) ||
+    ModakProducts.find((p) => p.id === Number(key));
 
   if (!item) notFound();
 
@@ -32,7 +34,7 @@ export default async function ProductPage({ params }: Props) {
   return (
     <main className="bg-background">
       <div className="mx-auto max-w-md py-4">
-        <ProductGallery images={item.images}  />
+        <ProductGallery images={item.images} showPreview={false} />
         <ProductInfoCards items={item.highlights} />
         <ProductDetails
           product={{
