@@ -58,7 +58,7 @@ export default CartProvider;
 export const useCartContext = () => {
   const context = useContext(CartContext);
   if (!context) {
-    throw new Error("useTheme must be used within a ThemeProvider");
+    throw new Error("CartContext must be used within a ThemeProvider");
   }
 
   return context;

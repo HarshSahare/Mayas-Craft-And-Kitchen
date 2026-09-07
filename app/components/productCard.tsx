@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { useCartContext } from "../provider/contexts/cartContext";
 
 function ProductCard({
   id,
@@ -21,6 +23,8 @@ function ProductCard({
   sold?: number;
   base_url: string;
 }) {
+  const { addItemToCart } = useCartContext();
+
   return (
     <Link
       href={`${base_url}/${id}-${name.toLocaleLowerCase().split(" ").join("-")}`}
@@ -40,6 +44,10 @@ function ProductCard({
           height={50}
           className="absolute bottom-0 right-0 w-[22.5%]"
           alt="add to cart button"
+          onClick={(e) => {
+            e.preventDefault();
+            addItemToCart(id);
+          }}
         />
       </div>
       <div className="flex font-dm gap-2">
