@@ -17,6 +17,7 @@ const CartContext = createContext<CartProviderContext | null>(null);
 
 function CartProvider({ children }: { children: React.ReactNode }) {
   const [items, setItems] = useState<CartItemType[]>([]);
+  const [hasLoaded, setHasLoaded] = useState(false);
 
   const addItemToCart = (id: number) => {
     setItems((prev) => {
@@ -38,6 +39,49 @@ function CartProvider({ children }: { children: React.ReactNode }) {
   };
 
   const reset = () => setItems([]);
+
+  const CART_STORAGE_KEY = "mayas-cart";
+
+  const serializeCart = (items: CartItemType[]) => {
+    return items.map((item) => `${item.id}:${item.quantity}`).join("|");
+  };
+
+  const deserializeCart = (value: string): CartItemType[] => {
+    if (!value) return [];
+
+    return value
+      .split("|")
+      .map((item) => {
+        const [id, quantity] = item.split(":");
+
+        return {
+          id: Number(id),
+          quantity: Number(quantity),
+        };
+      })
+      .filter(
+        (item) =>
+          Number.isInteger(item.id) &&
+          Number.isInteger(item.quantity) &&
+          item.quantity > 0,
+      );
+  };
+
+  useEffect(() => {
+    if (!hasLoaded) return;
+
+    localStorage.setItem(CART_STORAGE_KEY, serializeCart(items));
+  }, [items, hasLoaded]);
+
+  useEffect(() => {
+    const storedCart = localStorage.getItem(CART_STORAGE_KEY);
+
+    if (storedCart) {
+      setItems(deserializeCart(storedCart));
+    }
+
+    setHasLoaded(true);
+  }, []);
 
   return (
     <CartContext.Provider
