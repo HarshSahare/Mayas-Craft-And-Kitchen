@@ -11,6 +11,7 @@ const CartPage = () => {
   const { items } = useCartContext();
 
   let KitchenProductsCount = 0;
+  const minimumCombo = 5;
 
   const cartItems = items
     .map((cartItem) => {
@@ -61,20 +62,16 @@ const CartPage = () => {
 
   const calculateNewCost = (originalTotal: number, count: number) => {
     let discount = 0;
-
     if (count > 9) {
-      discount += (count / 10) * 50;
+      discount +=
+        Math.floor(count / 10) * 250 + (Math.floor(count / 10) - 1) * 150;
       count = count % 10;
     }
     if (count > 4) {
-      discount += (count / 5) * 10;
+      discount +=
+        Math.floor(count / 5) * 100 + (Math.floor(count / 5) - 1) * 50;
       count = count % 5;
     }
-    if (count > 1) {
-      discount += (count / 2) * 5;
-      count = count % 2;
-    }
-
     return originalTotal - discount;
   };
 
@@ -157,10 +154,10 @@ Thank you!`;
 
           <span className="font-dm text-[25px] font-black text-[#2B2B2B]">
             ₹
-            {KitchenProductsCount > 1
+            {KitchenProductsCount >= minimumCombo
               ? calculateNewCost(total, KitchenProductsCount)
               : total}
-            {KitchenProductsCount > 1 && (
+            {KitchenProductsCount >= minimumCombo && (
               <div className="flex font-medium gap-2  text-[10px] text-[#8C8C8C] mt-1">
                 <div className="line-through">₹{total}</div>
                 <span className="text-[#FF0F0F] font-bold">
