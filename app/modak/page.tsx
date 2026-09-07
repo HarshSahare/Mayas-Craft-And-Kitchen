@@ -7,7 +7,7 @@ function Page() {
   return (
     <div>
       <Title />
-      <div className="mt-2">
+      <div className="my-10">
         <ProductsSection
           base_url="/product/kitchen"
           title=""
