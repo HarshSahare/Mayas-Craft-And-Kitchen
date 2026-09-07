@@ -6,9 +6,10 @@ import "./productGallery.css";
 
 type Props = {
   images: string[];
+  showPreview?: boolean;
 };
 
-export default function ProductGallery({ images }: Props) {
+export default function ProductGallery({ images, showPreview = true }: Props) {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
@@ -66,23 +67,25 @@ export default function ProductGallery({ images }: Props) {
         </div>
       </div>
 
-      <div className="mt-4 flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
-        {images.map((image, index) => (
-          <button
-            key={image + index}
-            onClick={() => setSelectedIndex(index)}
-            className={`shrink-0 overflow-hidden rounded-sm transition-all duration-300`}
-          >
-            <Image
-              src={image}
-              alt={`Thumbnail ${index + 1}`}
-              width={80}
-              height={80}
-              className="aspect-video w-20 object-cover"
-            />
-          </button>
-        ))}
-      </div>
+      {showPreview && (
+        <div className="mt-4 flex gap-3 overflow-x-auto pb-2 scrollbar-hide">
+          {images.map((image, index) => (
+            <button
+              key={image + index}
+              onClick={() => setSelectedIndex(index)}
+              className={`shrink-0 overflow-hidden rounded-sm transition-all duration-300`}
+            >
+              <Image
+                src={image}
+                alt={`Thumbnail ${index + 1}`}
+                width={80}
+                height={80}
+                className="aspect-video w-20 object-cover"
+              />
+            </button>
+          ))}
+        </div>
+      )}
     </section>
   );
 }
