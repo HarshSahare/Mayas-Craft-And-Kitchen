@@ -9,7 +9,7 @@ interface ProductInfoCardsProps {
 
 const ProductInfoCards = ({ items }: ProductInfoCardsProps) => {
   return (
-    <div className="flex w-full gap-3 overflow-x-auto font-dm">
+    <div className="flex w-full gap-3 overflow-x-auto font-dm py-1">
       {items.map((item, index) => (
         <div
           key={index}

@@ -8,7 +8,7 @@ export type KitchenProductsType = {
   rating?: number;
   sold?: number;
   productDetails: string[];
-  size: string;
+  size?: string;
   highlights: highlightsType[];
 };
 

@@ -3,7 +3,7 @@ import React from "react";
 interface PriceCardProps {
   price: number;
   originalPrice?: number;
-  size: string;
+  size?: string;
 }
 
 function PriceBox({ price, originalPrice, size }: PriceCardProps) {
@@ -30,10 +30,12 @@ function PriceBox({ price, originalPrice, size }: PriceCardProps) {
       </div>
 
       {/* Size */}
-      <div className="flex items-center justify-end gap-1 text-[10px] font-medium">
-        <div dangerouslySetInnerHTML={{ __html: icon }}></div>
-        <span className="mt-2">{size}</span>
-      </div>
+      {size && (
+        <div className="flex items-center justify-end gap-1 text-[10px] font-medium">
+          <div dangerouslySetInnerHTML={{ __html: icon }}></div>
+          <span className="mt-2">{size}</span>
+        </div>
+      )}
     </div>
   );
 }
