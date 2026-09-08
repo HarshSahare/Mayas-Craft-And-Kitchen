@@ -8,7 +8,7 @@ interface PriceCardProps {
 
 function PriceBox({ price, originalPrice, size }: PriceCardProps) {
   return (
-    <div className="relative flex my-5 w-full font-dm items-center justify-between rounded-xl border border-[#A6532E] px-[15px] py-2.5 text-[#9B4B2B]">
+    <div className="relative mt-4 flex mb-2.5 w-full font-dm items-center justify-between rounded-xl border border-[#A6532E] px-[15px] py-2.5 text-[#9B4B2B]">
       {/* Label */}
       <span className="absolute font-semibold  -top-[11px] left-[14px] bg-background px-[8px] text-[12px]  leading-5">
         <div className="absolute w-1 h-1 -translate-y-1/3 rounded-[50%] bg-[#9B4B2B] left-0 top-1/2"></div>
