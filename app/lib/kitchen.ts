@@ -146,38 +146,6 @@ export const KitchenProducts: KitchenProductsType[] = [
   },
   {
     id: 24,
-    name: "Black Currant",
-    description:
-      "Creamy, rich and beautifully tangy. Chocolate cake and smooth cream are balanced by a bold black currant filling and juicy berries.",
-    productDetails: [
-      "Inside: Black currant & chocolate",
-      "Taste: Sweet-tangy berry",
-      "Texture: Creamy & juicy",
-      "Best For: Berry lovers",
-      "Storage: Keep refrigerated",
-      "Allergens: Dairy, wheat",
-    ],
-    highlights: [
-      { label: "Eggless", value: "Yes" },
-      { label: "Perfect For", value: "1–2 people" },
-      { label: "Berry Twist", value: "Sweet-tangy" },
-      { label: "Freshness", value: "Made fresh to order" },
-    ],
-    images: [
-      "/images/product_24_1.png",
-      "/images/product_24_2.png",
-      "/images/product_24_3.png",
-      "/images/product_24_4.png",
-      "/images/product_24_5.png",
-    ],
-    size: "200ml Glass Size",
-    price: 100,
-    oldPrice: 150,
-    rating: 4.9,
-    sold: 31,
-  },
-  {
-    id: 25,
     name: "Mix Fruit",
     description:
       "A colourful, refreshing dessert packed with fruity goodness. Creamy cake layers meet a mix of fruits, giving you sweetness, freshness and different textures in every spoonful.",
@@ -196,6 +164,38 @@ export const KitchenProducts: KitchenProductsType[] = [
       { label: "Freshness", value: "Made fresh to order" },
     ],
     images: [
+      "/images/product_24_1.png",
+      "/images/product_24_2.png",
+      "/images/product_24_3.png",
+      "/images/product_24_4.png",
+      "/images/product_24_5.png",
+    ],
+    size: "200ml Glass Size",
+    price: 100,
+    oldPrice: 150,
+    rating: 4.6,
+    sold: 12,
+  },
+  {
+    id: 25,
+    name: "Black Currant",
+    description:
+      "Creamy, rich and beautifully tangy. Chocolate cake and smooth cream are balanced by a bold black currant filling and juicy berries.",
+    productDetails: [
+      "Inside: Black currant & chocolate",
+      "Taste: Sweet-tangy berry",
+      "Texture: Creamy & juicy",
+      "Best For: Berry lovers",
+      "Storage: Keep refrigerated",
+      "Allergens: Dairy, wheat",
+    ],
+    highlights: [
+      { label: "Eggless", value: "Yes" },
+      { label: "Perfect For", value: "1–2 people" },
+      { label: "Berry Twist", value: "Sweet-tangy" },
+      { label: "Freshness", value: "Made fresh to order" },
+    ],
+    images: [
       "/images/product_25_1.png",
       "/images/product_25_2.png",
       "/images/product_25_3.png",
@@ -205,8 +205,8 @@ export const KitchenProducts: KitchenProductsType[] = [
     size: "200ml Glass Size",
     price: 100,
     oldPrice: 150,
-    rating: 4.6,
-    sold: 12,
+    rating: 4.9,
+    sold: 31,
   },
   {
     id: 26,
