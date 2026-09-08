@@ -14,7 +14,7 @@ export default function DropDownDetail({
     productDetails &&
     productDetails.length > 0 && (
       <div
-        className={`w-full border rounded-xl border-[#8F4925] my-2 text-[#555]`}
+        className={`w-full border rounded-xl border-[#8F4925] my-2.5 text-[#555]`}
       >
         <button
           type="button"

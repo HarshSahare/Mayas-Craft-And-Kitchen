@@ -13,9 +13,9 @@ const ProductInfoCards = ({ items }: ProductInfoCardsProps) => {
       {items.map((item, index) => (
         <div
           key={index}
-          className="flex min-w-max flex-col overflow-hidden rounded-[5px] text-[10px] border border-[#9B4B2B]"
+          className="flex flex-1 min-w-max flex-col overflow-hidden rounded-[8px] text-[12px] border border-[#9B4B2B]"
         >
-          <div className="whitespace-nowrap relative bg-[#8F4925] px-3 py-1 font-medium  text-[#FFF8F4]">
+          <div className="relative bg-[#8F4925] px-2 py-1 font-medium  text-[#FFF8F4]">
             {item.label}
             <div className="h-2 w-3 absolute bottom-0 left-0 translate-y-[95%]">
               <svg
@@ -34,7 +34,7 @@ const ProductInfoCards = ({ items }: ProductInfoCardsProps) => {
             </div>
           </div>
 
-          <div className="whitespace-nowrap bg-[#FFF8F4] px-3 py-1  font-bold text-[#2F2F30]">
+          <div className="whitespace-nowrap bg-[#FFF8F4] px-2 py-1  font-bold text-[#2F2F30]">
             {item.value}
           </div>
         </div>
