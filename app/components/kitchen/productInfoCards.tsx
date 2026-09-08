@@ -9,7 +9,7 @@ interface ProductInfoCardsProps {
 
 const ProductInfoCards = ({ items }: ProductInfoCardsProps) => {
   return (
-    <div className="flex w-full gap-3 overflow-x-auto font-dm py-1">
+    <div className="flex w-full gap-1 overflow-x-auto font-dm py-1">
       {items.map((item, index) => (
         <div
           key={index}
@@ -34,7 +34,7 @@ const ProductInfoCards = ({ items }: ProductInfoCardsProps) => {
             </div>
           </div>
 
-          <div className="whitespace-nowrap bg-[#FFF8F4] px-2 py-1  font-bold text-[#2F2F30]">
+          <div className="bg-[#FFF8F4] px-2 py-1  font-bold text-[#2F2F30]">
             {item.value}
           </div>
         </div>

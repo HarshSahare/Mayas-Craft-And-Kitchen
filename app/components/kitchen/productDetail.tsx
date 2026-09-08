@@ -21,7 +21,7 @@ export default function ProductDetails({ product }: Props) {
         </div>
       </div>
 
-      <p className="text-[#8F8E8F] text-[16px]">{product.description}</p>
+      <p className="text-[#8F8E8F] text-[14px]">{product.description}</p>
     </section>
   );
 }
