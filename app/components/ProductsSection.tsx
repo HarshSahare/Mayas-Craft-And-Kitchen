@@ -13,7 +13,7 @@ function ProductsSection({
   base_url: string;
 }) {
   return (
-    <div className="my-4">
+    <div>
       <div className="text-[16px] font-black font-dm text-[#2B2B2B] my-2 ">
         {title}
       </div>
