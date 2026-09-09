@@ -3,11 +3,10 @@ import ProductDetails from "@/app/components/kitchen/productDetail";
 import BottomBar from "@/app/components/product/bottomBar";
 import ProductFeatures from "@/app/components/product/productFeatures";
 import ProductGallery from "@/app/components/product/productGallery";
-import { Products, ProductsType } from "@/app/lib/products";
 import { notFound } from "next/navigation";
 import PriceBox from "../../../components/kitchen/priceBox";
 import DeliveryBox from "@/app/components/kitchen/deliveryBox";
-import { KitchenProducts } from "@/app/lib/kitchen";
+import { KitchenProducts , KitchenProductsType } from "@/app/lib/kitchen";
 import ProductInfoCards from "@/app/components/kitchen/productInfoCards";
 import { ModakProducts } from "@/app/lib/modak";
 
@@ -69,9 +68,8 @@ export async function generateMetadata({ params }: Props) {
 
   const [key] = product.split("-");
 
-  const item: ProductsType | undefined = Products.find(
-    (p) => p.id === Number(key),
-  );
+  const item: KitchenProductsType | undefined = KitchenProducts.find((p) => p.id === Number(key)) ||
+    ModakProducts.find((p) => p.id === Number(key));
 
   if (!item) {
     return {};
