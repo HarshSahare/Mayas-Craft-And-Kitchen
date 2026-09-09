@@ -6,7 +6,7 @@ import ProductGallery from "@/app/components/product/productGallery";
 import { notFound } from "next/navigation";
 import PriceBox from "../../../components/kitchen/priceBox";
 import DeliveryBox from "@/app/components/kitchen/deliveryBox";
-import { KitchenProducts , KitchenProductsType } from "@/app/lib/kitchen";
+import { KitchenProducts, KitchenProductsType } from "@/app/lib/kitchen";
 import ProductInfoCards from "@/app/components/kitchen/productInfoCards";
 import { ModakProducts } from "@/app/lib/modak";
 
@@ -68,8 +68,11 @@ export async function generateMetadata({ params }: Props) {
 
   const [key] = product.split("-");
 
-  const item: KitchenProductsType | undefined = KitchenProducts.find((p) => p.id === Number(key)) ||
+  const item: KitchenProductsType | undefined =
+    KitchenProducts.find((p) => p.id === Number(key)) ||
     ModakProducts.find((p) => p.id === Number(key));
+
+  console.log(item?.images[0]);
 
   if (!item) {
     return {};
