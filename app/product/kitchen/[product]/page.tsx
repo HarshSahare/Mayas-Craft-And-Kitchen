@@ -57,7 +57,7 @@ export default async function ProductPage({ params }: Props) {
       <BottomBar
         price={item.price}
         originalPrice={item.oldPrice}
-        buyLink={`${link}link: ${base_url}/product/${item.id}-${item.name.toLocaleLowerCase().split(" ").join("-")}%0AName: ${item.name}%0APrice: ${item.price}`}
+        buyLink={`${link}link: ${base_url}/product/kitchen/${item.id}-${item.name.toLocaleLowerCase().split(" ").join("-")}%0AName: ${item.name}%0APrice: ${item.price}`}
       />
     </main>
   );
