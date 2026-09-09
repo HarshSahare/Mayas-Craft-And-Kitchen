@@ -20,7 +20,7 @@ type highlightsType = {
 export const KitchenProducts: KitchenProductsType[] = [
   {
     id: 20,
-    name: "Chocolate Truffle",
+    name: "Chocolate Truffle Glass Cake",
     description:
       "A rich, creamy chocolate treat made for serious chocolate lovers. Soft chocolate cake, smooth chocolate cream and indulgent chocolate topping come together in every spoonful.",
     productDetails: [
@@ -52,7 +52,7 @@ export const KitchenProducts: KitchenProductsType[] = [
   },
   {
     id: 21,
-    name: "Oreo Crunch",
+    name: "Oreo Crunch Glass Cake",
     description:
       "Creamy, chocolatey and irresistibly crunchy. Smooth cream layers meet crushed Oreo pieces and soft chocolate cake for a dessert that gives you a little crunch in every bite.",
     productDetails: [
@@ -83,7 +83,7 @@ export const KitchenProducts: KitchenProductsType[] = [
   },
   {
     id: 22,
-    name: "Black Forest",
+    name: "Black Forest Glass Cake",
     description:
       "A classic chocolate-and-fruit combination in a convenient glass. Rich chocolate cake and creamy layers come together with fruity cherry notes and chocolate topping.",
     productDetails: [
@@ -115,7 +115,7 @@ export const KitchenProducts: KitchenProductsType[] = [
   },
   {
     id: 23,
-    name: "Strawberry Bliss",
+    name: "Strawberry Bliss Glass Cake",
     description:
       "Fresh, creamy and fruity. Sweet-tangy strawberry filling meets soft cake and smooth cream for a lighter alternative to rich chocolate desserts.",
     productDetails: [
@@ -146,7 +146,7 @@ export const KitchenProducts: KitchenProductsType[] = [
   },
   {
     id: 24,
-    name: "Mix Fruit",
+    name: "Mix Fruit Glass Cake",
     description:
       "A colourful, refreshing dessert packed with fruity goodness. Creamy cake layers meet a mix of fruits, giving you sweetness, freshness and different textures in every spoonful.",
     productDetails: [
@@ -178,7 +178,7 @@ export const KitchenProducts: KitchenProductsType[] = [
   },
   {
     id: 25,
-    name: "Black Currant",
+    name: "Black Currant Glass Cake",
     description:
       "Creamy, rich and beautifully tangy. Chocolate cake and smooth cream are balanced by a bold black currant filling and juicy berries.",
     productDetails: [
@@ -210,7 +210,7 @@ export const KitchenProducts: KitchenProductsType[] = [
   },
   {
     id: 26,
-    name: "Pineapple Crush",
+    name: "Pineapple Crush Glass Cake",
     description:
       "A creamy tropical treat with juicy pineapple in every layer. Soft cake and smooth cream are paired with sweet pineapple filling for a bright, refreshing finish.",
     productDetails: [
@@ -242,7 +242,7 @@ export const KitchenProducts: KitchenProductsType[] = [
   },
   {
     id: 27,
-    name: "KitKat Chocolate",
+    name: "KitKat Chocolate Glass Cake",
     description:
       "Chocolate cake meets creamy chocolate layers and crunchy KitKat pieces. Soft, rich and crunchy textures come together for an indulgent chocolate experience.",
     productDetails: [
@@ -274,7 +274,7 @@ export const KitchenProducts: KitchenProductsType[] = [
   },
   {
     id: 28,
-    name: "Butterscotch Bliss",
+    name: "Butterscotch Bliss Glass Cake",
     description:
       "Creamy, caramel-like and delightfully crunchy. Smooth cream and soft cake are paired with sweet butterscotch pieces and a rich topping for a comforting dessert experience.",
     productDetails: [
@@ -306,7 +306,7 @@ export const KitchenProducts: KitchenProductsType[] = [
   },
   {
     id: 29,
-    name: "Chocolate Hazelnut",
+    name: "Chocolate Hazelnut Glass Cake",
     description:
       "Rich chocolate with the unmistakable taste of roasted hazelnuts. Creamy chocolate layers are finished with crunchy hazelnut pieces for a deep, nutty and indulgent dessert.",
     productDetails: [

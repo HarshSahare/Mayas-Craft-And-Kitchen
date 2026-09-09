@@ -3,7 +3,7 @@ import { KitchenProductsType } from "./kitchen";
 export const ModakProducts: KitchenProductsType[] = [
   {
     id: 30,
-    name: "Oreo Crunch",
+    name: "Oreo Crunch Modak",
     description:
       "A rich milk chocolate Modak loaded with crunchy Oreo pieces. Smooth chocolate and the familiar cookies-and-cream flavour come together in every bite for an indulgent and satisfying treat.",
     productDetails: [
@@ -33,7 +33,7 @@ export const ModakProducts: KitchenProductsType[] = [
   },
   {
     id: 31,
-    name: "Hazelnut Crunch",
+    name: "Hazelnut Crunch Modak",
     description:
       "A delicious milk chocolate Modak finished with crunchy roasted hazelnuts. Rich chocolate and nutty hazelnut flavour come together for a satisfying sweet and crunchy bite.",
     productDetails: [
@@ -63,7 +63,7 @@ export const ModakProducts: KitchenProductsType[] = [
   },
   {
     id: 32,
-    name: "Peanut Crunch",
+    name: "Peanut Crunch Modak",
     description:
       "A smooth milk chocolate Modak finished with crunchy roasted peanuts. The rich sweetness of chocolate pairs beautifully with the nutty roasted flavour of peanuts for a deliciously crunchy bite.",
     productDetails: [
@@ -93,7 +93,7 @@ export const ModakProducts: KitchenProductsType[] = [
   },
   {
     id: 33,
-    name: "Strawberry Cream",
+    name: "Strawberry Cream Modak",
     description:
       "A creamy and fruity chocolate Modak combining smooth chocolate with sweet strawberry flavour. The rich chocolate pairs beautifully with refreshing strawberry notes for a delightful twist.",
     productDetails: [
@@ -123,7 +123,7 @@ export const ModakProducts: KitchenProductsType[] = [
   },
   {
     id: 34,
-    name: "Caramel Crunch",
+    name: "Caramel Crunch Modak",
     description:
       "A rich milk chocolate Modak finished with sweet caramel and a delicious crunchy topping. Smooth chocolate and buttery caramel flavours create a comforting and indulgent treat.",
     productDetails: [
@@ -153,7 +153,7 @@ export const ModakProducts: KitchenProductsType[] = [
   },
   {
     id: 35,
-    name: "Coffee",
+    name: "Coffee Modak",
     description:
       "A rich chocolate Modak infused with the bold aroma and flavour of coffee. Smooth milk chocolate meets deep coffee notes to create a perfectly balanced treat for coffee lovers.",
     productDetails: [
@@ -183,7 +183,7 @@ export const ModakProducts: KitchenProductsType[] = [
   },
   {
     id: 36,
-    name: "Coconut",
+    name: "Coconut Modak",
     description:
       "A smooth milk chocolate Modak finished with delicate coconut for a deliciously sweet and tropical twist. Rich chocolate and mild coconut flavour create a simple yet satisfying combination.",
     productDetails: [
@@ -213,7 +213,7 @@ export const ModakProducts: KitchenProductsType[] = [
   },
   {
     id: 37,
-    name: "Choco Chip",
+    name: "Choco Chip Modak",
     description:
       "A chocolate lover's favourite made with rich milk chocolate and plenty of chocolate chips. Every bite delivers smooth chocolate flavour with little bursts of extra chocolate crunch.",
     productDetails: [
@@ -243,7 +243,7 @@ export const ModakProducts: KitchenProductsType[] = [
   },
   {
     id: 38,
-    name: "Almond Crunch",
+    name: "Almond Crunch Modak",
     description:
       "A rich milk chocolate Modak topped with crunchy roasted almonds. Smooth chocolate and the delicious nutty flavour of almonds come together for a satisfying sweet and crunchy treat.",
     productDetails: [
@@ -273,7 +273,7 @@ export const ModakProducts: KitchenProductsType[] = [
   },
   {
     id: 39,
-    name: "Rainbow Sprinkle",
+    name: "Rainbow Sprinkle Modak",
     description:
       "A fun and colourful milk chocolate Modak finished with vibrant rainbow sprinkles. Rich chocolate and colourful crunchy sprinkles make every bite playful, sweet and delicious.",
     productDetails: [
@@ -301,128 +301,124 @@ export const ModakProducts: KitchenProductsType[] = [
     rating: 4.5,
     sold: 5,
   },
-
-  // {
-  //   id: 40,
-  //   name: "White Choco Nut",
-  //   description:
-  //     "A creamy white chocolate Modak finished with crunchy nuts. The smooth sweetness of white chocolate pairs beautifully with roasted nuts for a rich and satisfying bite.",
-  //   productDetails: [
-  //     "Inside: White chocolate & nuts",
-  //     "Taste: Sweet, nutty",
-  //     "Texture: Smooth & crunchy",
-  //     "Best For: White chocolate lovers",
-  //     "Storage: Keep refrigerated",
-  //     "Allergens: Dairy, nuts",
-  //   ],
-  //   highlights: [
-  //     { label: "Pieces", value: "10 Modaks" },
-  //     { label: "Chocolate", value: "White Chocolate" },
-  //     { label: "Crunch", value: "Roasted Nuts" },
-  //     { label: "Eggless", value: "Yes" },
-  //   ],
-  //   images: [
-  //     "/images/product_40_1.png",
-  //     "/images/product_40_2.png",
-  //     "/images/product_40_3.png",
-  //     "/images/product_40_4.png",
-  //   ],
-  //   price: 139,
-  //   oldPrice: 189,
-  //   rating: 4.7,
-  //   sold: 7,
-  // },
-
-  // {
-  //   id: 41,
-  //   name: "White Choco Cranberry",
-  //   description:
-  //     "A creamy white chocolate Modak finished with sweet and tangy cranberry pieces. The rich sweetness of white chocolate is beautifully balanced by the fruity tartness of cranberry.",
-  //   productDetails: [
-  //     "Inside: White chocolate & cranberry",
-  //     "Taste: Sweet, tangy",
-  //     "Texture: Smooth & chewy",
-  //     "Best For: Fruit lovers",
-  //     "Storage: Keep refrigerated",
-  //     "Allergens: Dairy",
-  //   ],
-  //   highlights: [
-  //     { label: "Pieces", value: "10 Modaks" },
-  //     { label: "Chocolate", value: "White Chocolate" },
-  //     { label: "Fruit", value: "Dried Cranberries" },
-  //     { label: "Eggless", value: "Yes" },
-  //   ],
-  //   images: [
-  //     "/images/product_41_1.png",
-  //     "/images/product_41_2.png",
-  //     "/images/product_41_3.png",
-  //     "/images/product_41_4.png",
-  //   ],
-  //   price: 145,
-  //   oldPrice: 199,
-  //   rating: 4.8,
-  //   sold: 10,
-  // },
-
-  // {
-  //   id: 42,
-  //   name: "White Oreo Crunch",
-  //   description:
-  //     "A creamy white chocolate Modak packed with crunchy Oreo pieces. Sweet white chocolate and the classic cookies-and-cream flavour create an irresistible combination in every bite.",
-  //   productDetails: [
-  //     "Inside: White chocolate & Oreo",
-  //     "Taste: Sweet, creamy",
-  //     "Texture: Smooth & crunchy",
-  //     "Best For: Oreo lovers",
-  //     "Storage: Keep refrigerated",
-  //     "Allergens: Wheat, dairy, soy",
-  //   ],
-  //   highlights: [
-  //     { label: "Pieces", value: "10 Modaks" },
-  //     { label: "Chocolate", value: "White Chocolate" },
-  //     { label: "Crunch", value: "Oreo Cookie Pieces" },
-  //     { label: "Eggless", value: "Yes" },
-  //   ],
-  //   images: [
-  //     "/images/product_42_1.png",
-  //     "/images/product_42_2.png",
-  //     "/images/product_42_3.png",
-  //     "/images/product_42_4.png",
-  //   ],
-  //   price: 149,
-  //   oldPrice: 199,
-  //   rating: 4.9,
-  //   sold: 15,
-  // },
-
-  // {
-  //   id: 43,
-  //   name: "Rose Modak",
-  //   description:
-  //     "A delicate chocolate Modak infused with the elegant flavour of rose. Smooth chocolate and subtle floral notes come together for a unique, fragrant and indulgent festive treat.",
-  //   productDetails: [
-  //     "Inside: Chocolate & rose",
-  //     "Taste: Sweet, floral",
-  //     "Texture: Smooth & creamy",
-  //     "Best For: Rose lovers",
-  //     "Storage: Keep refrigerated",
-  //     "Allergens: Dairy, soy",
-  //   ],
-  //   highlights: [
-  //     { label: "Pieces", value: "10 Modaks" },
-  //     { label: "Chocolate", value: "Milk Chocolate" },
-  //     { label: "Flavour", value: "Delicate Rose" },
-  //     { label: "Eggless", value: "Yes" },
-  //   ],
-  //   images: [
-  //     "/images/product_43_1.png",
-  //     "/images/product_43_2.png",
-  //     "/images/product_43_3.png",
-  //     "/images/product_43_4.png",
-  //   ],
-  //   price: 150,
-  //   oldPrice: 209,
-  //   rating: 4.9,
-  //   sold: 18,
-  // },
+  {
+    id: 40,
+    name: "White Choco Nut Modak",
+    description:
+      "A creamy white chocolate Modak finished with crunchy nuts. The smooth sweetness of white chocolate pairs beautifully with roasted nuts for a rich and satisfying bite.",
+    productDetails: [
+      "Inside: White chocolate & nuts",
+      "Taste: Sweet, nutty",
+      "Texture: Smooth & crunchy",
+      "Best For: White chocolate lovers",
+      "Storage: Keep refrigerated",
+      "Allergens: Dairy, nuts",
+    ],
+    highlights: [
+      { label: "Pieces", value: "10 Modaks" },
+      { label: "Chocolate", value: "White Chocolate" },
+      { label: "Crunch", value: "Roasted Nuts" },
+      { label: "Eggless", value: "Yes" },
+    ],
+    images: [
+      "/images/product_40_1.png",
+      "/images/product_40_2.png",
+      "/images/product_40_3.png",
+      "/images/product_40_4.png",
+    ],
+    price: 139,
+    oldPrice: 189,
+    rating: 4.7,
+    sold: 7,
+  },
+  {
+    id: 41,
+    name: "White Choco Cranberry Modak",
+    description:
+      "A creamy white chocolate Modak finished with sweet and tangy cranberry pieces. The rich sweetness of white chocolate is beautifully balanced by the fruity tartness of cranberry.",
+    productDetails: [
+      "Inside: White chocolate & cranberry",
+      "Taste: Sweet, tangy",
+      "Texture: Smooth & chewy",
+      "Best For: Fruit lovers",
+      "Storage: Keep refrigerated",
+      "Allergens: Dairy",
+    ],
+    highlights: [
+      { label: "Pieces", value: "10 Modaks" },
+      { label: "Chocolate", value: "White Chocolate" },
+      { label: "Fruit", value: "Dried Cranberries" },
+      { label: "Eggless", value: "Yes" },
+    ],
+    images: [
+      "/images/product_41_1.png",
+      "/images/product_41_2.png",
+      "/images/product_41_3.png",
+      "/images/product_41_4.png",
+    ],
+    price: 145,
+    oldPrice: 199,
+    rating: 4.8,
+    sold: 10,
+  },
+  {
+    id: 42,
+    name: "White Oreo Crunch Modak",
+    description:
+      "A creamy white chocolate Modak packed with crunchy Oreo pieces. Sweet white chocolate and the classic cookies-and-cream flavour create an irresistible combination in every bite.",
+    productDetails: [
+      "Inside: White chocolate & Oreo",
+      "Taste: Sweet, creamy",
+      "Texture: Smooth & crunchy",
+      "Best For: Oreo lovers",
+      "Storage: Keep refrigerated",
+      "Allergens: Wheat, dairy, soy",
+    ],
+    highlights: [
+      { label: "Pieces", value: "10 Modaks" },
+      { label: "Chocolate", value: "White Chocolate" },
+      { label: "Crunch", value: "Oreo Cookie Pieces" },
+      { label: "Eggless", value: "Yes" },
+    ],
+    images: [
+      "/images/product_42_1.png",
+      "/images/product_42_2.png",
+      "/images/product_42_3.png",
+      "/images/product_42_4.png",
+    ],
+    price: 149,
+    oldPrice: 199,
+    rating: 4.9,
+    sold: 15,
+  },
+  {
+    id: 43,
+    name: "Rose Modak Modak",
+    description:
+      "A delicate chocolate Modak infused with the elegant flavour of rose. Smooth chocolate and subtle floral notes come together for a unique, fragrant and indulgent festive treat.",
+    productDetails: [
+      "Inside: Chocolate & rose",
+      "Taste: Sweet, floral",
+      "Texture: Smooth & creamy",
+      "Best For: Rose lovers",
+      "Storage: Keep refrigerated",
+      "Allergens: Dairy, soy",
+    ],
+    highlights: [
+      { label: "Pieces", value: "10 Modaks" },
+      { label: "Chocolate", value: "Milk Chocolate" },
+      { label: "Flavour", value: "Delicate Rose" },
+      { label: "Eggless", value: "Yes" },
+    ],
+    images: [
+      "/images/product_43_1.png",
+      "/images/product_43_2.png",
+      "/images/product_43_3.png",
+      "/images/product_43_4.png",
+    ],
+    price: 150,
+    oldPrice: 209,
+    rating: 4.9,
+    sold: 18,
+  },
 ] as const;
