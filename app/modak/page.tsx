@@ -9,6 +9,7 @@ function Page() {
       <Title />
       <div className="my-10">
         <ProductsSection
+          loadAtOnce={true}
           base_url="/product/kitchen"
           title=""
           products={ModakProducts}

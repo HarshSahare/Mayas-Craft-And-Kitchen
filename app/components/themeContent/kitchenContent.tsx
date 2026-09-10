@@ -11,6 +11,7 @@ function KitchenContent() {
       <KitchenHeroSection />
       <OfferBanner />
       <ProductsSection
+        loadAtOnce={true}
         title="Products"
         products={KitchenProducts}
         base_url="/product/kitchen"
