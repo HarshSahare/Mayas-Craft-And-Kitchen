@@ -13,8 +13,8 @@ function ProductsSection({
   base_url: string;
 }) {
   return (
-    <div>
-      <div className="text-[16px] font-black font-dm text-[#2B2B2B] my-2 ">
+    <div className="pt-6">
+      <div className="text-[20px] font-black font-dm text-[#2B2B2B] mb-3 ">
         {title}
       </div>
       <div className="grid grid-cols-2 gap-4">

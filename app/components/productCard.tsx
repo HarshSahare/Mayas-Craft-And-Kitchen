@@ -51,7 +51,7 @@ function ProductCard({
         />
       </div>
       <div className="flex font-dm gap-2">
-        <div className="font-black text-foreground text-[20px]">
+        <div className="font-black text-foreground text-[16px]">
           ₹{currentPrice}
         </div>
         {oldPrice && (
@@ -60,7 +60,7 @@ function ProductCard({
           </div>
         )}
       </div>
-      <div className="truncate text-[12px] font-dm font-medium capitalize">
+      <div className="truncate text-[14px] font-dm font-medium capitalize">
         {name}
       </div>
       <div className="flex gap-1">
