@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import IncludedItemCard from "./includedItemCard";
 import "./includedItems.css";
-import { IncludedItemDataType } from "@/frontend/app/lib/hamperData";
+import { IncludedItemDataType } from "@/app/lib/hamperData";
 
 type Props = {
   items: IncludedItemDataType[];

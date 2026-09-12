@@ -5,7 +5,7 @@ import { HeartAngleIcon } from "@solar-icons/react/linear/heart-angle";
 import { AltArrowDownIcon } from "@solar-icons/react/linear/alt-arrow-down";
 import { AltArrowUpIcon } from "@solar-icons/react/linear/alt-arrow-up";
 import { AltArrowUpOutlineIcon } from "@solar-icons/react";
-import { EmbroideryArtProductsType } from "@/frontend/app/lib/embroidery_art";
+import { EmbroideryArtProductsType } from "@/app/lib/embroidery_art";
 
 export default function DropDownDetail({
   productDetails,

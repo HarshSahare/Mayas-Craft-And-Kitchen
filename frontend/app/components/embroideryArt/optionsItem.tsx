@@ -1,4 +1,4 @@
-import { EmbroideryArtProductsInputOptionType } from "@/frontend/app/lib/embroidery_art";
+import { EmbroideryArtProductsInputOptionType } from "@/app/lib/embroidery_art";
 import Image from "next/image";
 import React from "react";
 

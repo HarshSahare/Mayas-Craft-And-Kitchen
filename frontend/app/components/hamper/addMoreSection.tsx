@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import AddItemCard from "./addItemCard";
 import "./includedItems.css";
-import { AddOnItemsDataType } from "@/frontend/app/lib/hamperData";
+import { AddOnItemsDataType } from "@/app/lib/hamperData";
 
 export default function AddMoreSection({
   products,

@@ -3,13 +3,13 @@ import { notFound } from "next/navigation";
 import {
   EmbroideryArtProducts,
   EmbroideryArtProductsType,
-} from "@/frontend/app/lib/embroidery_art";
-import ProductGallery from "@/frontend/app/components/product/productGallery";
-import BottomBar from "@/frontend/app/components/product/bottomBar";
-import ProductDetails from "@/frontend/app/components/embroideryArt/productDetail";
-import OptionsSection from "@/frontend/app/components/embroideryArt/optionsSection";
-import WhyYoullLoveIt from "@/frontend/app/components/embroideryArt/WhyYoullLoveIt";
-import DropDownDetail from "@/frontend/app/components/embroideryArt/dropDownDetail";
+} from "@/app/lib/embroidery_art";
+import ProductGallery from "@/app/components/product/productGallery";
+import BottomBar from "@/app/components/product/bottomBar";
+import ProductDetails from "@/app/components/embroideryArt/productDetail";
+import OptionsSection from "@/app/components/embroideryArt/optionsSection";
+import WhyYoullLoveIt from "@/app/components/embroideryArt/WhyYoullLoveIt";
+import DropDownDetail from "@/app/components/embroideryArt/dropDownDetail";
 
 type Props = {
   params: Promise<{

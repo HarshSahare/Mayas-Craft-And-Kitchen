@@ -1,17 +1,14 @@
-import DropDownDetail from "@/frontend/app/components/kitchen/dropDownDetail";
-import ProductDetails from "@/frontend/app/components/kitchen/productDetail";
-import BottomBar from "@/frontend/app/components/product/bottomBar";
-import ProductFeatures from "@/frontend/app/components/product/productFeatures";
-import ProductGallery from "@/frontend/app/components/product/productGallery";
+import DropDownDetail from "@/app/components/kitchen/dropDownDetail";
+import ProductDetails from "@/app/components/kitchen/productDetail";
+import BottomBar from "@/app/components/product/bottomBar";
+import ProductFeatures from "@/app/components/product/productFeatures";
+import ProductGallery from "@/app/components/product/productGallery";
 import { notFound } from "next/navigation";
 import PriceBox from "../../../components/kitchen/priceBox";
-import DeliveryBox from "@/frontend/app/components/kitchen/deliveryBox";
-import {
-  KitchenProducts,
-  KitchenProductsType,
-} from "@/frontend/app/lib/kitchen";
-import ProductInfoCards from "@/frontend/app/components/kitchen/productInfoCards";
-import { ModakProducts } from "@/frontend/app/lib/modak";
+import DeliveryBox from "@/app/components/kitchen/deliveryBox";
+import { KitchenProducts, KitchenProductsType } from "@/app/lib/kitchen";
+import ProductInfoCards from "@/app/components/kitchen/productInfoCards";
+import { ModakProducts } from "@/app/lib/modak";
 
 type Props = {
   params: Promise<{
