@@ -1,4 +1,7 @@
-import { AddOnItemsDataType, IncludedItemDataType } from "@/app/lib/hamperData";
+import {
+  AddOnItemsDataType,
+  IncludedItemDataType,
+} from "@/frontend/app/lib/hamperData";
 import React from "react";
 import SummaryItem from "./summaryItem";
 

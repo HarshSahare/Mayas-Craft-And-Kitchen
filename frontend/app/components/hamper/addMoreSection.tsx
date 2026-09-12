@@ -1,21 +1,17 @@
 "use client";
 
 import { useRef } from "react";
-import IncludedItemCard from "./includedItemCard";
+import AddItemCard from "./addItemCard";
 import "./includedItems.css";
-import { IncludedItemDataType } from "@/app/lib/hamperData";
+import { AddOnItemsDataType } from "@/frontend/app/lib/hamperData";
 
-type Props = {
-  items: IncludedItemDataType[];
-  onIncrease: (id: number) => void;
-  onDecrease: (id: number) => void;
-};
-
-export default function IncludedItems({
-  items,
-  onIncrease,
-  onDecrease,
-}: Props) {
+export default function AddMoreSection({
+  products,
+  addItems,
+}: {
+  products: AddOnItemsDataType[];
+  addItems: (id: number) => void;
+}) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: "left" | "right") => {
@@ -26,22 +22,22 @@ export default function IncludedItems({
   };
 
   return (
-    <section className="mt-10">
+    <section className="mt-14">
       <div className="mb-6 flex items-end justify-between">
         <div>
           <h2 className="font-dm text-4 font-bold text-primary">
             <span className="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full bg-primary text-sm text-white">
-              1
+              2
             </span>
-            Included in this hamper
+            Add more to your hamper
           </h2>
 
-          <p className="text-[14px] pl-7 font-dm  text-neutral-500">
-            These items come with your selected hamper.
+          <p className="pl-7 font-dm text-[14px] text-neutral-500">
+            Make it even more special by adding these popular items.
           </p>
         </div>
 
-        <div className="flex gap-1">
+        <div className="flex ">
           <button
             onClick={() => scroll("left")}
             className="rounded-full p-2 hover:bg-neutral-100"
@@ -80,16 +76,15 @@ export default function IncludedItems({
 
       <div
         ref={scrollRef}
-        className="flex gap-5 overflow-x-auto scroll-smooth pb-2 scrollbar-hide"
+        className="flex gap-5 overflow-x-auto scroll-smooth scrollbar-hide pb-2"
       >
-        {items.map((item) => (
-          <IncludedItemCard
-            key={item.id}
-            image={item.image}
-            name={item.name}
-            quantity={item.quantity}
-            onIncrease={() => onIncrease(item.id)}
-            onDecrease={() => onDecrease(item.id)}
+        {products.map((product) => (
+          <AddItemCard
+            key={product.id}
+            image={product.image}
+            name={product.name}
+            price={product.price}
+            onAdd={() => addItems(product.id)}
           />
         ))}
       </div>

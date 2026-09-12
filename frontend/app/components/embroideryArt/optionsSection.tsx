@@ -1,5 +1,5 @@
 "use client";
-import { EmbroideryArtProductsInputType } from "@/app/lib/embroidery_art";
+import { EmbroideryArtProductsInputType } from "@/frontend/app/lib/embroidery_art";
 import React from "react";
 import OptionsItem from "./optionsItem";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";

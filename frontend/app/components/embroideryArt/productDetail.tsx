@@ -1,4 +1,4 @@
-import { EmbroideryArtProductsType } from "@/app/lib/embroidery_art";
+import { EmbroideryArtProductsType } from "@/frontend/app/lib/embroidery_art";
 
 type Props = {
   product: EmbroideryArtProductsType;

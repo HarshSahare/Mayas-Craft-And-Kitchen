@@ -1,7 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { AddOnItemsDataType, IncludedItemDataType } from "@/app/lib/hamperData";
+import {
+  AddOnItemsDataType,
+  IncludedItemDataType,
+} from "@/frontend/app/lib/hamperData";
 import SummaryItem from "./summaryItem";
 import SummaryButton from "./summaryButton";
 import ExpandedSummary from "./expandedSummary";
@@ -59,5 +62,3 @@ export default function SummarySection({
     </section>
   );
 }
-
-

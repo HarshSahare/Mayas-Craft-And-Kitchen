@@ -1,4 +1,4 @@
-import { ProductsType } from "@/app/lib/products";
+import { ProductsType } from "@/frontend/app/lib/products";
 
 type Props = {
   product: ProductsType;

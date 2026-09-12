@@ -1,7 +1,7 @@
 import React from "react";
 import ProductsSection from "../ProductsSection";
-import { Products } from "@/app/lib/products";
-import { EmbroideryArtProducts } from "@/app/lib/embroidery_art";
+import { Products } from "@/frontend/app/lib/products";
+import { EmbroideryArtProducts } from "@/frontend/app/lib/embroidery_art";
 import CraftHeroSection from "../heroSection/craftHeroSection";
 
 function CraftContent() {

@@ -1,8 +1,8 @@
-import BottomBar from "@/app/components/product/bottomBar";
-import ProductDetails from "@/app/components/product/productDetails";
-import ProductFeatures from "@/app/components/product/productFeatures";
-import ProductGallery from "@/app/components/product/productGallery";
-import { Products, ProductsType } from "@/app/lib/products";
+import BottomBar from "@/frontend/app/components/product/bottomBar";
+import ProductDetails from "@/frontend/app/components/product/productDetails";
+import ProductFeatures from "@/frontend/app/components/product/productFeatures";
+import ProductGallery from "@/frontend/app/components/product/productGallery";
+import { Products, ProductsType } from "@/frontend/app/lib/products";
 import { notFound } from "next/navigation";
 
 type Props = {
