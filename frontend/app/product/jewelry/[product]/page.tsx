@@ -10,7 +10,7 @@ import ProductDetails from "@/app/components/embroideryArt/productDetail";
 import OptionsSection from "@/app/components/embroideryArt/optionsSection";
 import WhyYoullLoveIt from "@/app/components/embroideryArt/WhyYoullLoveIt";
 import DropDownDetail from "@/app/components/embroideryArt/dropDownDetail";
-import { JewelryProducts } from "@/app/lib/earing";
+import { JewelryProducts, JewelryProductsType } from "@/app/lib/earing";
 
 type Props = {
   params: Promise<{
@@ -80,8 +80,9 @@ export async function generateMetadata({ params }: Props) {
 
   const [key] = product.split("-");
 
-  const item: EmbroideryArtProductsType | undefined =
-    EmbroideryArtProducts.find((p) => p.id === Number(key));
+  const item: JewelryProductsType | undefined = JewelryProducts.find(
+    (p) => p.id === Number(key),
+  );
 
   if (!item) {
     return {};
