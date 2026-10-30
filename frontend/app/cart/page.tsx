@@ -1,8 +1,8 @@
 "use client";
 
+import { ChocolateProducts } from "../lib/chocolate";
 import { EmbroideryArtProducts } from "../lib/embroidery_art";
 import { KitchenProducts } from "../lib/kitchen";
-import { ModakProducts } from "../lib/modak";
 import { Products, ProductsType } from "../lib/products";
 import { useCartContext } from "../provider/contexts/cartContext";
 import CartItem from "./cartItems";
@@ -42,7 +42,7 @@ const CartPage = () => {
         };
       }
 
-      product = ModakProducts.find((product) => product.id === cartItem.id);
+      product = ChocolateProducts.find((product) => product.id === cartItem.id);
       if (product) {
         return {
           ...product,

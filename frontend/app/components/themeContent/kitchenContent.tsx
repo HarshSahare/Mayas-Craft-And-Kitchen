@@ -4,6 +4,7 @@ import { Products } from "@/app/lib/products";
 import KitchenHeroSection from "../heroSection/kitchenHeroSection";
 import { KitchenProducts } from "@/app/lib/kitchen";
 import OfferBanner from "../kitchen/offerBanner";
+import { ChocolateProducts } from "@/app/lib/chocolate";
 
 function KitchenContent() {
   return (
@@ -11,10 +12,14 @@ function KitchenContent() {
       <KitchenHeroSection />
       <OfferBanner />
       <ProductsSection
-        loadAtOnce={true}
         title="Products"
         products={KitchenProducts}
         base_url="/product/kitchen"
+      />
+      <ProductsSection
+        title="chocolate"
+        products={ChocolateProducts}
+        base_url="/product/chocolate"
       />
     </>
   );
